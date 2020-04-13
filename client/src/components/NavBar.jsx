@@ -61,7 +61,7 @@ class NavBar extends Component {
                                     <NavLink href="/jumpstart/chat">Chat</NavLink>
                                 </NavItem>
                                 <NavItem style={{ margin: "25px" }}>
-                                    <NavLink href="/jumpstart/resources">Resources</NavLink>
+                                    <NavLink href="/jumpstart/resources">Workshops</NavLink>
                                 </NavItem>
                             </Nav>
                         </Col>

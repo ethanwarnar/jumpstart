@@ -42,7 +42,7 @@ class Home extends Component {
                     <Col sm>
                         <Card style={{ margin: "15px" }} >
                             <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back Ethan</CardText>
+                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back Seoyoon</CardText>
                             </CardBody>
                         </Card>
                     </Col>
