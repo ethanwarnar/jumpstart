@@ -26,7 +26,7 @@ import {
     CustomInput
 } from 'reactstrap';
 
-
+import { Calendar } from '../components'
 
 const Container = styled.div.attrs({
     className: 'container',
@@ -42,7 +42,7 @@ class Home extends Component {
                     <Col sm>
                         <Card style={{ margin: "15px" }} >
                             <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back Ethan.</CardText>
+                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back Ethan</CardText>
                             </CardBody>
                         </Card>
                     </Col>
@@ -62,7 +62,7 @@ class Home extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col sm>
+                    <Col sm="4">
                         <Card style={{ margin: "15px" }}>
                             <CardBody>
                                 <FormGroup>
@@ -78,15 +78,25 @@ class Home extends Component {
                             </CardBody>
                         </Card>
                     </Col>
-                    <Col sm></Col>
-                    <Col sm></Col>
+                    <Col sm="8">
+                        <Card style={{ margin: "15px" }}>
+                            <CardBody >
+                                {/* <CardText style={{ fontSize: "20px", textAlign: "center" }}>Calendar</CardText> */}
+                                <Calendar />
+                            </CardBody>
+                        </Card>
 
 
 
 
+                    </Col>
 
+                </Row>
 
+                <Row>
+                    <Col>
 
+                    </Col>
                 </Row>
                 {/* <Card>
                     <CardBody>
