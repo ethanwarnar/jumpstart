@@ -42,14 +42,14 @@ class Home extends Component {
                     <Col sm>
                         <Card style={{ margin: "15px" }} >
                             <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back Seoyoon</CardText>
+                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back Seoyoon!</CardText>
                             </CardBody>
                         </Card>
                     </Col>
                     <Col sm>
                         <Card style={{ margin: "15px" }}>
                             <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>5 New Job Matches </CardText>
+                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>7 New Workshop Matches </CardText>
                             </CardBody>
                         </Card>
                     </Col>
@@ -63,7 +63,7 @@ class Home extends Component {
                 </Row>
                 <Row>
                     <Col sm="4">
-                        <Card style={{ margin: "15px" }}>
+                        {/* <Card style={{ margin: "15px" }}>
                             <CardBody>
                                 <FormGroup>
                                     <CardText style={{ fontSize: "20px", textAlign: "center" }}>Daily Tasks</CardText>
@@ -76,7 +76,7 @@ class Home extends Component {
                                     </div>
                                 </FormGroup>
                             </CardBody>
-                        </Card>
+                        </Card> */}
                     </Col>
                     <Col sm="8">
                         <Card style={{ margin: "15px" }}>
