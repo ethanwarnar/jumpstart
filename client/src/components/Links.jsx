@@ -21,12 +21,12 @@ class Links extends Component {
                 <Collapse>
                     <List>
                         <Item>
-                            <Link to="/jumpstart/survey" className="nav-link m-2 menu-item nav-active">
-                                Survey
+                            <Link to="/jumpstart/profile" className="nav-link m-2 menu-item nav-active">
+                                Profile
                             </Link>
-                            
+
                         </Item>
-                        
+
                         <Item>
                             <Link to="/jumpstart/jobs" className="nav-link m-2 menu-item nav-active">
                                 Jobs

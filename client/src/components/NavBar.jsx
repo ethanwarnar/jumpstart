@@ -51,17 +51,17 @@ class NavBar extends Component {
                         </Col>
                         <Col >
                             <Nav className="mr-auto right" navbar>
-                                <NavItem style={{ margin: "25px" }}>
-                                    <NavLink href="/jumpstart/survey">Survey</NavLink>
+                            <NavItem style={{ margin: "25px" }}>
+                                    <NavLink href="/jumpstart/home">Dashboard</NavLink>
                                 </NavItem>
                                 <NavItem style={{ margin: "25px" }}>
-                                    <NavLink href="/jumpstart/jobs">Jobs</NavLink>
+                                    <NavLink href="/jumpstart/resources">Events</NavLink>
                                 </NavItem>
                                 <NavItem style={{ margin: "25px" }}>
-                                    <NavLink href="/jumpstart/chat">Chat</NavLink>
+                                    <NavLink href="/jumpstart/chat">Networking</NavLink>
                                 </NavItem>
                                 <NavItem style={{ margin: "25px" }}>
-                                    <NavLink href="/jumpstart/resources">Workshops</NavLink>
+                                    <NavLink href="/jumpstart/profile">Profile</NavLink>
                                 </NavItem>
                             </Nav>
                         </Col>
