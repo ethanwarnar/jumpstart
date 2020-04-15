@@ -21,21 +21,23 @@ import {
     Row
 } from 'reactstrap';
 
+import '../style/main.scss'
+
 const Container = styled.div.attrs({
     className: 'container-fullwidth',
 })
-    `
-margin-bottom:105px;
+`
+margin-bottom:75px;
 `
 const NavContainer = styled.div.attrs({
     className: 'container',
-})`height:60px`
+})`height:75px`
 
 class NavBar extends Component {
     render() {
         return (
             <Container>
-                <Navbar fixed="top" color="light" light expand="md">
+                <Navbar  style={{backgroundColor:"#FFF3E2"}} fixed="top"  light expand="md">
                     <NavContainer>
                         <Col sm>
                             <NavbarBrand href="/">
@@ -50,7 +52,7 @@ class NavBar extends Component {
                         </NavbarBrand>
                         </Col>
                         <Col >
-                            <Nav className="mr-auto right" navbar>
+                            <Nav style={{backgroundColor: '#00000'}} className="mr-auto right" navbar>
                             <NavItem style={{ margin: "25px" }}>
                                     <NavLink href="/jumpstart/home">Dashboard</NavLink>
                                 </NavItem>
@@ -69,11 +71,8 @@ class NavBar extends Component {
                 </Navbar>
 
             </Container>
-
         );
     }
-
-
 }
 
 

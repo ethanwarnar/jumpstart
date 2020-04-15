@@ -33,18 +33,39 @@ import {
 const Container = styled.div.attrs({
     className: 'container',
 })
-`
+    `
+margin-bottom:75px;
+
 `
 class RecruiterLanding extends Component {
     render() {
         return (
-            <Card style={{ margin: "15px" }}>
-                <CardBody>
-                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>Recruiter Landing</CardText>
-                
-                
-                </CardBody>
-            </Card>
+            <React.Fragment>
+                <Container>
+                    <Container />
+                    <Row>
+                        <Col sm="6">
+                            <CardText style={{ margin: "200px 0px 0px", fontSize: "45px", }}>
+                                Discover global   talent <br /> in one-click.
+                            </CardText>
+                            <CardText style={{ margin: "30px 0px 0px", fontSize: "25px", }}>
+                                XXX is a platform where you can host events and connect with selected students around <br /> the world.
+                            </CardText>
+                            <Button color="secondary"
+                                style={{ margin: "30px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px" }}
+                            // onClick={() => this.showComponent("recruiterLanding")}
+                            >
+                                Register
+                            </Button>
+                        </Col>
+                        <Card body outline style={{ borderColor: "#FFA824", margin: "125px 0px 0px" }} >
+                            <CardBody>
+                                <CardText style={{ height: "500px", fontSize: "20px", textAlign: "center" }}></CardText>
+                            </CardBody>
+                        </Card>
+                    </Row>
+                </Container>
+            </React.Fragment>
         )
     }
 }
