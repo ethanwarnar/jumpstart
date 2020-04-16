@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Logo from './Logo'
 import Links from './Links'
-import logo from '../logo.svg'
+import logo from '../logo.jpg'
 import {
     Collapse,
     Navbar,
@@ -48,7 +48,7 @@ class NavBar extends Component {
                                     width="50"
                                     height="50"
                                 />{'  '}
-                                Jumpstart
+                                Macchiato
                         </NavbarBrand>
                         </Col>
                         <Col >

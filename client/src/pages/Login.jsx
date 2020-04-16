@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import { StudentLanding, RecruiterLanding } from '../components'
 import styled from 'styled-components'
-import logo from '../logo.svg'
+import logo from '../logo.jpg'
 import { connect } from 'react-redux'
 
 
@@ -36,7 +36,7 @@ import { isStudent, isProfessional } from '../redux/actions.js'
 const Container = styled.div.attrs({
     className: 'container',
 })
-    `
+`
 `
 const NavContainer = styled.div.attrs({
     className: 'container',
@@ -105,7 +105,7 @@ class Login extends Component {
                                         width="50"
                                         height="50"
                                     />{'  '}
-                                    Jumpstart
+                                    Macchiato
                         </NavbarBrand>
                             </Col>
                             <Col >
