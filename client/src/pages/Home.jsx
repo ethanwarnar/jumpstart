@@ -25,6 +25,9 @@ import {
     Label,
     CustomInput
 } from 'reactstrap';
+import { connect } from 'react-redux'
+
+
 
 import { Calendar, NavBar } from '../components'
 
@@ -34,110 +37,130 @@ const Container = styled.div.attrs({
     `
 `
 
+const mapStateToProps = state => {
+    const { dashboard } = state
+    return {
+        state: dashboard,
+        isStudent: dashboard.isStudent,
+        isProfessional: dashboard.isProfessional,
+        firstName: dashboard.student.firstName,
+        isLoggedIn: dashboard.isLoggedIn
+    }
+}
+
 class Home extends Component {
     render() {
         return (
             <React.Fragment>
-                <NavBar/>
-            <Container>
-                <Row>
-                    <Col sm="6">
-                        <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }} >
-                            <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back, Seoyoon!</CardText>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                    <Col sm="3">
-                        <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }}>
-                            <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Accepted Events </CardText>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                    <Col sm="3">
-                        <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }}>
-                            <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>New Messages</CardText>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col sm="6">
+                <NavBar />
+                <Container>
+                    <Row>
+                        <Col sm="6">
+                            <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }} >
+                                <CardBody>
+                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back, {this.props.firstName}!</CardText>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col sm="3">
+                            <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }}>
+                                <CardBody>
+                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>Accepted Events </CardText>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col sm="3">
+                            <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }}>
+                                <CardBody>
+                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>New Messages</CardText>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col sm="6">
 
-                        <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }} >
-                            <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>
-                                    Your event How to Break into Product Management <br />
-                                    is in 2 days with Jessica McKenzie
+                            <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }} >
+                                <CardBody>
+                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>
+                                        Your event How to Break into Product Management <br />
+                                        is in 2 days with Jessica McKenzie
                                 </CardText>
-                            </CardBody>
-                        </Card>
-                        <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }} >
-                            <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>
-                                    Your coffee chat with Emily Adams in 4 days
+                                </CardBody>
+                            </Card>
+                            <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }} >
+                                <CardBody>
+                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>
+                                        Your coffee chat with Emily Adams in 4 days
                                 </CardText>
-                            </CardBody>
-                        </Card>
-                        <Row>
-                            <Col sm="4">
-                                <Card body inverse style={{ backgroundColor: "#FFA824", height: "130px" }} >
-                                    <CardTitle style={{ fontSize: "30px", textAlign: "center", margin: "0" }}>
-                                        7 
+                                </CardBody>
+                            </Card>
+                            <Row>
+                                <Col sm="4">
+                                    <Card body inverse style={{ backgroundColor: "#FFA824", height: "130px" }} >
+                                        <CardTitle style={{ fontSize: "30px", textAlign: "center", margin: "0" }}>
+                                            7
                                     </CardTitle>
 
                                         <CardText style={{ fontSize: "18px", textAlign: "center" }}>
-                                            New 
+                                            New
                                             Apps
                                         </CardText>
-                                </Card>
-                            </Col>
+                                    </Card>
+                                </Col>
 
-                            <Col sm="4">
-                                <Card body inverse style={{ backgroundColor: "#FFA824", height: "130px" }} >
-                                    <CardTitle style={{ fontSize: "30px", textAlign: "center", margin: "0" }}>
-                                        3 
+                                <Col sm="4">
+                                    <Card body inverse style={{ backgroundColor: "#FFA824", height: "130px" }} >
+                                        <CardTitle style={{ fontSize: "30px", textAlign: "center", margin: "0" }}>
+                                            3
                                     </CardTitle>
-                                    <CardText style={{ fontSize: "18px", textAlign: "center" }}>
-                                        Mentees
+                                        <CardText style={{ fontSize: "18px", textAlign: "center" }}>
+                                            Mentees
                                     </CardText>
-                                {/* <CardBody>
+                                        {/* <CardBody>
                                         
                                     </CardBody> */}
-                                </Card>
-                            </Col>
+                                    </Card>
+                                </Col>
 
-                        <Col sm="4">
-                            <Card body inverse style={{ backgroundColor: "#FFA824", height: "130px" }} >
-                            <CardTitle style={{ fontSize: "30px", textAlign: "center", margin: "0" }}>
-                                        13 
+                                <Col sm="4">
+                                    <Card body inverse style={{ backgroundColor: "#FFA824", height: "130px" }} >
+                                        <CardTitle style={{ fontSize: "30px", textAlign: "center", margin: "0" }}>
+                                            13
                                     </CardTitle>
-                                    <CardText style={{ fontSize: "18px", textAlign: "center" }}>
-                                    
-                                            Saved 
+                                        <CardText style={{ fontSize: "18px", textAlign: "center" }}>
+
+                                            Saved
                                         Profiles
                                             </CardText>
+                                    </Card>
+                                </Col>
+                            </Row>
+                        </Col>
+
+
+                        <Col sm="6">
+                            <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }}>
+                                <CardBody >
+                                    {/* <CardText style={{ fontSize: "20px", textAlign: "center" }}>Calendar</CardText> */}
+                                    <Calendar />
+                                </CardBody>
                             </Card>
                         </Col>
-                        </Row>
-                    </Col>
-
-
-                <Col sm="6">
-                    <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }}>
-                        <CardBody >
-                            {/* <CardText style={{ fontSize: "20px", textAlign: "center" }}>Calendar</CardText> */}
-                            <Calendar />
-                        </CardBody>
-                    </Card>
-                </Col>
-                </Row>
-            </Container >
-        </React.Fragment>
+                    </Row>
+                </Container >
+            </React.Fragment>
         )
     }
 }
 
-export default Home
+const mapDispatchToProps = (dispatch) => {
+    return {
+        
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Home) 
