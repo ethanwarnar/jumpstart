@@ -29,6 +29,7 @@ import { connect } from 'react-redux'
 
 
 
+
 import { Calendar, NavBar } from '../components'
 
 const Container = styled.div.attrs({
@@ -44,19 +45,23 @@ const mapStateToProps = state => {
         isStudent: dashboard.isStudent,
         isProfessional: dashboard.isProfessional,
         firstName: dashboard.student.firstName,
-        isLoggedIn: dashboard.isLoggedIn
+        isLoggedIn: dashboard.isLoggedIn,
+        eventArray: dashboard.eventArray.array
     }
 }
 
 class Home extends Component {
     render() {
+        console.log("in dashboard")
+        console.log(this.props.state)
         return (
             <React.Fragment>
                 <NavBar />
                 <Container>
                     <Row>
                         <Col sm="6">
-                            <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }} >
+                            <Card body inverse style={{ backgroundColor: "#FFA824", margin: "75px 0px 0px" }} >
+
                                 <CardBody>
                                     <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back, {this.props.firstName}!</CardText>
                                 </CardBody>
@@ -65,7 +70,7 @@ class Home extends Component {
                         <Col sm="3">
                             <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }}>
                                 <CardBody>
-                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>Accepted Events </CardText>
+                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>Accepted Events {this.props.eventArray.length} </CardText>
                                 </CardBody>
                             </Card>
                         </Col>
@@ -80,12 +85,19 @@ class Home extends Component {
                     <Row>
                         <Col sm="6">
 
-                            <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }} >
-                                <CardBody>
+                            <Card body outline style={{ height: "150px", borderColor: "#FFA824", margin: "50px 0px 50px" }} >
+                                <CardBody style={{ overflowY: "auto" }}>
                                     <CardText style={{ fontSize: "20px", textAlign: "center" }}>
-                                        Your event How to Break into Product Management <br />
-                                        is in 2 days with Jessica McKenzie
-                                </CardText>
+                                        {this.props.eventArray.map(x => {
+                                            return (
+                                                <CardText>{x.name}</CardText>
+                                            )
+                                        })}
+
+
+
+
+                                    </CardText>
                                 </CardBody>
                             </Card>
                             <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }} >
@@ -115,7 +127,7 @@ class Home extends Component {
                                             3
                                     </CardTitle>
                                         <CardText style={{ fontSize: "18px", textAlign: "center" }}>
-                                            Mentees
+                                            Mentors
                                     </CardText>
                                         {/* <CardBody>
                                         
@@ -156,7 +168,7 @@ class Home extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        
+
     }
 }
 

@@ -22,4 +22,11 @@ export const isProfessional = result => {
     })
 }
 
+export const addEvent = result => {
+    return ({
+        type: "ADD_EVENT",
+        payload: result
+    })
+}
+
 
