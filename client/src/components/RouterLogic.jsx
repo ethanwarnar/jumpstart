@@ -28,11 +28,11 @@ class RouterLogic extends Component {
             <React.Fragment>
                 <Router>
                     <Switch>
-                        <Route path="/" exact component={Login} />
-                        <Route path="/jumpstart/home" exact component={Home} /> 
-                        <Route path="/jumpstart/profile" exact component={Profile} /> 
-                        <Route path="/jumpstart/chat" exact component={Chat} /> 
-                        <Route path="/jumpstart/resources" exact component={Resources} />
+                        <Route exact path="/" exact component={Login} />
+                        <Route path="/macchiato/dashboard" exact component={Home} />
+                        <Route path="/macchiato/profile" exact component={Profile} />
+                        <Route path="/macchiato/chat" exact component={Chat} />
+                        <Route path="/macchiato/resources" exact component={Resources} />
                     </Switch>
                 </Router>
             </React.Fragment>

@@ -49,7 +49,7 @@ class RecruiterLanding extends Component {
                                 Discover global   talent <br /> in one-click.
                             </CardText>
                             <CardText style={{ margin: "30px 0px 0px", fontSize: "25px", }}>
-                                XXX is a platform where you can host events and connect with selected students around <br /> the world.
+                                Macchiato is a platform where you can host events and connect with selected students around the world.
                             </CardText>
                             <Button color="secondary"
                                 style={{ margin: "30px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px" }}

@@ -1,7 +1,7 @@
 import React, { useState, Component } from 'react'
 import styled from 'styled-components'
 
-import Logo from './Logo'
+// import Logo from './Logo'
 import Links from './Links'
 import logo from '../logo.jpg'
 import {
@@ -40,7 +40,7 @@ class NavBar extends Component {
                 <Navbar  style={{backgroundColor:"#FFF3E2"}} fixed="top"  light expand="md">
                     <NavContainer>
                         <Col sm>
-                            <NavbarBrand href="/">
+                            <NavbarBrand href="/macchiato/dashboard">
                                 <img
                                     style={{ marginRight: "20px" }}
                                     alt=""
@@ -54,16 +54,16 @@ class NavBar extends Component {
                         <Col >
                             <Nav style={{backgroundColor: '#00000'}} className="mr-auto right" navbar>
                             <NavItem style={{ margin: "25px" }}>
-                                    <NavLink href="/jumpstart/home">Dashboard</NavLink>
+                                    <NavLink href="/macchiato/dashboard">Dashboard</NavLink>
                                 </NavItem>
                                 <NavItem style={{ margin: "25px" }}>
-                                    <NavLink href="/jumpstart/resources">Events</NavLink>
+                                    <NavLink href="/macchiato/resources">Events</NavLink>
                                 </NavItem>
                                 <NavItem style={{ margin: "25px" }}>
-                                    <NavLink href="/jumpstart/chat">Networking</NavLink>
+                                    <NavLink href="/macchiato/chat">Networking</NavLink>
                                 </NavItem>
                                 <NavItem style={{ margin: "25px" }}>
-                                    <NavLink href="/jumpstart/profile">Profile</NavLink>
+                                    <NavLink href="/macchiato/profile">Profile</NavLink>
                                 </NavItem>
                             </Nav>
                         </Col>

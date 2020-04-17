@@ -81,7 +81,7 @@ class StudentLanding extends Component {
                                 Connect with industry<br /> professionals worldwide.
                             </CardText>
                             <CardText style={{ margin: "30px 0px 0px", fontSize: "25px", }}>
-                                XXX is a platform where you can engage with various companies through virtual events.
+                            Macchiato is a platform where you can engage with various companies through virtual events.
                             </CardText>
                             <Button color="secondary" onClick={() => this.toggleModal()}
                                 style={{ margin: "30px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px" }}

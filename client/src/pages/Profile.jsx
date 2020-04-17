@@ -30,6 +30,8 @@ import {
     FormText
 } from 'reactstrap';
 
+import { NavBar } from '../components'
+
 const Container = styled.div.attrs({
     className: 'container',
 })
@@ -39,15 +41,20 @@ const Container = styled.div.attrs({
 class Profile extends Component {
     render() {
         return (
-            <Container>
-                <Card style={{ margin: "15px" }}>
-                <CardBody>
-                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>Profile Page</CardText>
-                
-                
-                </CardBody>
-            </Card>
-            </Container>
+            <React.Fragment>
+                <NavBar />
+                <Container>
+                    <Row>
+
+                        <Card style={{ margin: "75px 0px 0px" }}>
+                            <CardBody>
+                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Profile Page</CardText>
+
+                            </CardBody>
+                        </Card>
+                    </Row>
+                </Container>
+            </React.Fragment>
         )
     }
 }

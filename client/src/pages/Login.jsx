@@ -36,7 +36,7 @@ import { isStudent, isProfessional } from '../redux/actions.js'
 const Container = styled.div.attrs({
     className: 'container',
 })
-`
+    `
 `
 const NavContainer = styled.div.attrs({
     className: 'container',

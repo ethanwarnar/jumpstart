@@ -66,7 +66,7 @@ class StudentProfile extends Component {
     render() {
         // console.log("isloggedin", typeof(this.props.isLoggedIn))
         if (this.props.isLoggedIn) {
-            return <Redirect to='/jumpstart/home' />
+            return <Redirect to='/macchiato/dashboard' />
         }
 
         console.log(this.props.state)
