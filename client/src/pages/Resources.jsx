@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { NavBar } from '../components'
 import { connect } from 'react-redux'
+import { Redirect } from "react-router-dom"
+
 
 import {
     Collapse,
@@ -57,7 +59,8 @@ const mapStateToProps = state => {
     const { dashboard } = state
     return {
         eventArray: dashboard.eventArray.array,
-        state: dashboard
+        state: dashboard,
+        isLoggedIn: dashboard.isLoggedIn
     }
 }
 
@@ -79,6 +82,9 @@ class Resources extends Component {
     }
 
     render() {
+        // if (!this.props.isLoggedIn) {
+        //     return <Redirect to='/' />
+        // }
 
         const items = events.filter((x) => {
             if (this.state.search == null)
@@ -93,10 +99,15 @@ class Resources extends Component {
                         <CardTitle style={{ fontSize: "20px", textAlign: "center" }}>{x.name}</CardTitle>
                         <CardBody>
                             <CardText style={{ fontSize: "17px" }}>{x.host}  |  {x.company}</CardText>
+                            {/* <CardText style={{ color: "black", fontsize: "17px"}}>
+                                <a href={x.link} target="_blank">Add to your Calendar</a>
+                            
+                            </CardText> */}
                             <CardText style={{ fontSize: "17px" }}>{x.date}</CardText>
                             <CardText style={{ fontSize: "17px" }}>{x.time}</CardText>
                             <div style={{ textAlign: "center" }}>
                                 <Button
+                                    href={x.link} target="_blank"
                                     style={{ margin: "15px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px", textAlign: "center" }}
                                     onClick={() => this.props.addNewEvent(x)}
                                 >Sign Up

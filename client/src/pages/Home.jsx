@@ -27,8 +27,7 @@ import {
 } from 'reactstrap';
 import { connect } from 'react-redux'
 
-
-
+import { Redirect } from "react-router-dom"
 
 import { Calendar, NavBar } from '../components'
 
@@ -52,6 +51,10 @@ const mapStateToProps = state => {
 
 class Home extends Component {
     render() {
+        // if (!this.props.isLoggedIn) {
+        //     return <Redirect to='/' />
+        // }
+
         console.log("in dashboard")
         console.log(this.props.state)
         return (
@@ -60,56 +63,68 @@ class Home extends Component {
                 <Container>
                     <Row>
                         <Col sm="6">
-                            <Card body inverse style={{ backgroundColor: "#FFA824", margin: "75px 0px 0px" }} >
-
-                                <CardBody>
-                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>Welcome back, {this.props.firstName}!</CardText>
-                                </CardBody>
+                            <Card body inverse style={{ borderRadius: "18px", height: "100px", backgroundColor: "#FFA824", margin: "18vh 0px 0px", }} >
+                                <CardText style={{ fontSize: "40px", textAlign: "center" }}>Welcome back, {this.props.firstName}!</CardText>
                             </Card>
                         </Col>
                         <Col sm="3">
-                            <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }}>
-                                <CardBody>
-                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>Accepted Events {this.props.eventArray.length} </CardText>
-                                </CardBody>
+                            <Card body outline style={{ borderRadius: "18px", justifyContent: "center", height: "100px", borderColor: "#FFA824", margin: "18vh 0px 0px", borderWidth: "3px" }}>
+                                <CardText style={{ fontSize: "22px", textAlign: "center" }}>Accepted Events {this.props.eventArray.length} </CardText>
                             </Card>
                         </Col>
                         <Col sm="3">
-                            <Card body outline style={{ borderColor: "#FFA824", margin: "75px 0px 0px" }}>
-                                <CardBody>
-                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>New Messages</CardText>
-                                </CardBody>
+                            <Card body outline style={{ borderRadius: "18px", justifyContent: "center", height: "100px", borderColor: "#FFA824", margin: "18vh 0px 0px", borderWidth: "3px" }}>
+                                <CardText style={{ fontSize: "22px", textAlign: "center" }}>New Messages</CardText>
                             </Card>
                         </Col>
                     </Row>
                     <Row>
                         <Col sm="6">
+                            <CardText style={{ margin: "25px 0px 20px", fontSize: "25px" }}>Upcoming Events</CardText>
+                            <Row>
 
-                            <Card body outline style={{ height: "150px", borderColor: "#FFA824", margin: "50px 0px 50px" }} >
-                                <CardBody style={{ overflowY: "auto" }}>
-                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>
-                                        {this.props.eventArray.map(x => {
-                                            return (
-                                                <CardText>{x.name}</CardText>
+
+                                <Col sm="6">
+                                    <Card body outline style={{ borderRadius: "18px", height: "150px", borderColor: "#FFA824", margin: "0px ", borderWidth: "3px" }} >
+                                        {(this.props.eventArray.length == 1)
+                                            ? (
+                                                <div>
+                                                    <CardText style={{ fontSize: "20px", }}>{this.props.eventArray[0].name} by {this.props.eventArray[0].host}</CardText>
+                                                    <CardText style={{ fontSize: "14px", }}>{this.props.eventArray[0].date} | {this.props.eventArray[0].time}</CardText>
+                                                </div>
                                             )
-                                        })}
+                                            :
+                                            (
+                                                <CardText style={{ fontSize: "20px", }}>Please add an event</CardText>
+                                            )
+                                        }
+                                    </Card>
+                                </Col>
+                                <Col sm="6">
+                                    <Card body outline style={{ borderRadius: "18px", height: "150px", borderColor: "#FFA824", margin: "0px ", borderWidth: "3px" }} >
+                                        {(this.props.eventArray.length >= 2)
+                                            ? (
+                                                <div>
+                                                    <CardText style={{ fontSize: "20px", }}>{this.props.eventArray[1].name} by {this.props.eventArray[1].host}</CardText>
+                                                    <CardText style={{ fontSize: "14px", }}>{this.props.eventArray[1].date} | {this.props.eventArray[1].time}</CardText>
+                                                </div>
+                                            )
+                                            :
+                                            (
+                                                <CardText style={{ fontSize: "20px", }}>Please add an event</CardText>
+
+                                            )
+                                        }
+                                    </Card>
+                                </Col>
+                            </Row>
+
+                            <CardText style={{ margin: "25px 0px 20px", fontSize: "25px" }}>My Mentors</CardText>
 
 
-
-
-                                    </CardText>
-                                </CardBody>
-                            </Card>
-                            <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }} >
-                                <CardBody>
-                                    <CardText style={{ fontSize: "20px", textAlign: "center" }}>
-                                        Your coffee chat with Emily Adams in 4 days
-                                </CardText>
-                                </CardBody>
-                            </Card>
                             <Row>
                                 <Col sm="4">
-                                    <Card body inverse style={{ backgroundColor: "#FFA824", height: "130px" }} >
+                                    <Card body inverse style={{ borderRadius: "18px", backgroundColor: "#FFA824", height: "130px" }} >
                                         <CardTitle style={{ fontSize: "30px", textAlign: "center", margin: "0" }}>
                                             7
                                     </CardTitle>
@@ -122,7 +137,7 @@ class Home extends Component {
                                 </Col>
 
                                 <Col sm="4">
-                                    <Card body inverse style={{ backgroundColor: "#FFA824", height: "130px" }} >
+                                    <Card body inverse style={{ borderRadius: "18px", backgroundColor: "#FFA824", height: "130px" }} >
                                         <CardTitle style={{ fontSize: "30px", textAlign: "center", margin: "0" }}>
                                             3
                                     </CardTitle>
@@ -136,15 +151,14 @@ class Home extends Component {
                                 </Col>
 
                                 <Col sm="4">
-                                    <Card body inverse style={{ backgroundColor: "#FFA824", height: "130px" }} >
+                                    <Card body inverse style={{ borderRadius: "18px", backgroundColor: "#FFA824", height: "130px" }} >
                                         <CardTitle style={{ fontSize: "30px", textAlign: "center", margin: "0" }}>
                                             13
                                     </CardTitle>
                                         <CardText style={{ fontSize: "18px", textAlign: "center" }}>
-
                                             Saved
-                                        Profiles
-                                            </CardText>
+                                            Profiles
+                                        </CardText>
                                     </Card>
                                 </Col>
                             </Row>
@@ -152,9 +166,8 @@ class Home extends Component {
 
 
                         <Col sm="6">
-                            <Card body outline style={{ borderColor: "#FFA824", margin: "50px 0px 50px" }}>
+                            <Card body outline style={{ borderRadius: "18px", borderColor: "#FFA824", margin: "25px 0px 50px", borderWidth: "3px" }}>
                                 <CardBody >
-                                    {/* <CardText style={{ fontSize: "20px", textAlign: "center" }}>Calendar</CardText> */}
                                     <Calendar />
                                 </CardBody>
                             </Card>

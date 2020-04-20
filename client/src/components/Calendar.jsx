@@ -7,6 +7,19 @@ import interactionPlugin from '@fullcalendar/interaction' // needed for dayClick
 import '../style/main.scss'
 
 export default class Calendar extends React.Component {
+//     render() {
+//         return (
+//             <div style={{ height: "800px" }}>
+//                 <iframe
+//                     src="https://calendly.com/ethanwarnar/"
+//                     width="100%"
+//                     height="100%"
+//                     frameborder="0"
+//                 ></iframe>
+//             </div>
+//         );
+//     };
+// }
 
     calendarComponentRef = React.createRef()
     state = {
@@ -51,16 +64,16 @@ export default class Calendar extends React.Component {
         )
     }
 
-    toggleWeekends = () => {
-        this.setState({ // update a property
-            calendarWeekends: !this.state.calendarWeekends
-        })
-    }
+    // toggleWeekends = () => {
+    //     this.setState({ // update a property
+    //         calendarWeekends: !this.state.calendarWeekends
+    //     })
+    // }
 
-    gotoPast = () => {
-        let calendarApi = this.calendarComponentRef.current.getApi()
-        calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
-    }
+    // gotoPast = () => {
+    //     let calendarApi = this.calendarComponentRef.current.getApi()
+    //     calendarApi.gotoDate('2000-01-01') // call a method on the Calendar object
+    // }
 
     // handleDateClick = (arg) => {
     //     if (confirm('Would you like to add an event to ' + arg.dateStr + ' ?')) {
@@ -71,7 +84,6 @@ export default class Calendar extends React.Component {
     //                 allDay: arg.allDay
     //             })
     //         })
-    //     }
-    // }
+        }
+    
 
-}

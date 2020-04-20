@@ -1,4 +1,6 @@
 import { isStudent, isProfessional } from './actions.js'
+import {REHYDRATE} from 'redux-persist'
+
 
 const initialState = {
     isLoggedIn: false,
@@ -8,7 +10,15 @@ const initialState = {
         firstName: '',
     },
     eventArray: {
-        array: []
+        array: [
+            {
+                name:"",
+
+            },
+            {
+                name:"",
+            }
+        ]
     }
 }
 
@@ -62,6 +72,11 @@ const dashboard = (state = initialState, action) => {
                 }
             }
         }
+        // case REHYDRATE:
+        //     var incoming = action.payload.dashboard; // Carts is the name of the reducer
+        //     if (incoming) return {...state, ...incoming};
+        //     return state;
+        
         default:
             return state
     }

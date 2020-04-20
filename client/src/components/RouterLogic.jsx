@@ -5,22 +5,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Home, Profile, Chat, Resources, Login } from '../pages'
 import { AppWrapper } from '../routes/AppWrapper'
 
-import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
 
 
-const mapStateToProps = state => {
-    const { dashboard } = state
-    return {
-        isLoggedIn: dashboard.isLoggedIn,
-    }
-}
+
 
 class RouterLogic extends Component {
-    constructor(props) {
-        super(props);
-    }
+
 
     render() {
 
@@ -42,13 +34,4 @@ class RouterLogic extends Component {
 
 
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(RouterLogic)
+export default RouterLogic

@@ -58,6 +58,10 @@ class StudentProfile extends Component {
         this.submitProfile = this.submitProfile.bind(this);
     }
 
+    componentWillMount() {
+        this.props.setLoggedIn(false)
+    }
+
     submitProfile() {
         this.props.setLoggedIn(true)
         // return <Redirect to='/jumpstart/home'/>
@@ -193,7 +197,7 @@ class StudentProfile extends Component {
                             <Col >
                                 <Button
                                     style={{ margin: "15px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px" }}
-                                    onClick={() => this.submitProfile()}
+                                    onClick={() => this.submitProfile(true)}
                                 >Submit</Button>
                             </Col>
                         </FormGroup>
@@ -207,7 +211,7 @@ class StudentProfile extends Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         updateStudentFirstName: (event) => dispatch({ type: "GET_STUDENT_FIRST_NAME", payload: event.target.value }),
-        setLoggedIn: () => dispatch({ type: "IS_LOGGED_IN", payload: true }),
+        setLoggedIn: (bool) => dispatch({ type: "IS_LOGGED_IN", payload: bool }),
         updateStudent: (bool) => dispatch(isStudent(bool)),
     }
 }

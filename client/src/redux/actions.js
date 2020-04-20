@@ -7,6 +7,12 @@ export const getStudentFirstName = result => {
     })
 }
 
+export const IS_LOGGED_IN = result => {
+    return ({
+        type: "IS_LOGGED_IN",
+        payload: result
+    })
+}
 
 export const isStudent = result => {
     return ({

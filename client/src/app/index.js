@@ -5,18 +5,26 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Home, Profile, Chat, Resources, Login } from '../pages'
 
 import { Provider } from 'react-redux'
-import store from '../redux/store.js'
+// import {persistor, store}  from '../redux/store'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { connect } from 'react-redux'
 import { RouterLogic } from '../components'
+import { PersistGate } from 'redux-persist/integration/react'
+import configureStore from '../redux/store';
+const { persistor, store } = configureStore()
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+
+
 
 function App() {
   return (
     <Provider store={store}>
-      
-          <RouterLogic/>
-       
+      <PersistGate loading={null} persistor={persistor}>
+
+        <RouterLogic />
+      </PersistGate>
+
     </Provider>
   )
 }

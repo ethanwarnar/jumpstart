@@ -34,11 +34,13 @@ import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import StudentProfile from './StudentProfile'
 
+import { MdLocalCafe, MdAdd } from "react-icons/md"
+
+
 const Container = styled.div.attrs({
     className: 'container',
 })
     `
-    margin-bottom:75px;
 `
 
 
@@ -67,35 +69,36 @@ class StudentLanding extends Component {
         })
     }
 
-
-
-
     render() {
         return (
             <React.Fragment>
                 <Container>
-                    <Container />
                     <Row>
+
                         <Col sm="6">
-                            <CardText style={{ margin: "200px 0px 0px", fontSize: "45px", }}>
+                            <CardText style={{ margin: "32vh 0px 0px", fontSize: "45px", }}>
                                 Connect with industry<br /> professionals worldwide.
                             </CardText>
-                            <CardText style={{ margin: "30px 0px 0px", fontSize: "25px", }}>
-                            Macchiato is a platform where you can engage with various companies through virtual events.
+                            <CardText style={{ margin: "5vh 0px 0px", fontSize: "25px", }}>
+                                Macchiato is a platform where you can engage with various companies through virtual events.
                             </CardText>
-                            <Button color="secondary" onClick={() => this.toggleModal()}
-                                style={{ margin: "30px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px" }}
-                            >
-                                Register
+                            <div style={{ textAlign: "center" }}>
+                                <Button color="secondary" onClick={() => this.toggleModal()}
+                                    style={{ margin: "5vh 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px" }}
+                                >
+                                    Register
                             </Button>
+                            </div>
                         </Col>
-                        <Card body outline style={{ borderColor: "#FFA824", margin: "125px 0px 0px" }} >
-                            <CardBody>
-                                <CardText style={{ height: "500px", fontSize: "20px", textAlign: "center" }}></CardText>
-                            </CardBody>
-                        </Card>
+                        <Col sm="6">
+                            <div style={{ height: "250px", width: "100%", justifyContent: "center", textAlign: "center", margin: "35vh 0px 0px" }}>
+                                <MdLocalCafe style={{ transform: "scaleX(-1)", height: "200px", width: "200px" }} />
+                                <MdAdd style={{ color: "#FFA824", height: "75px", width: "75px" }} />
+                                <MdLocalCafe style={{ height: "200px", width: "200px" }} />
+                            </div>
+                        </Col>
                     </Row>
-                    <Modal style={{ top: "125px" }}
+                    <Modal style={{ top: "5vh" }}
                         isOpen={this.state.showModal}
                         toggle={() => this.toggleModal()}
                     >

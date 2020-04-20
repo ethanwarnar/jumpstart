@@ -1,30 +1,26 @@
-import { createStore, applyMiddleware } from 'redux'
-import { persistStore, persistReducer } from 'redux-persist';
+import { applyMiddleware, createStore } from 'redux';
+import { persistStore, persistCombineReducers } from 'redux-persist';
+import storage from 'redux-persist/es/storage' // default: localStorage if web, AsyncStorage if react-native
 
-import rootReducer from './rootReducer.js'
-import thunk from 'redux-thunk'
-import storage from 'redux-persist/lib/storage';
+// import { logger } from 'redux-logger';
+import thunk from 'redux-thunk';
+// import promise from 'redux-promise-middleware';
+import rootReducer from './rootReducer'
 
-
-// const store = createStore(rootReducer, applyMiddleware(thunk));
-
-
-
-const persistConfig = {
-    key: 'dashboard',
-    storage: storage,
-    whitelist: ['dashboard'] // which reducer want to store
-};
-const pReducer = persistReducer(persistConfig, rootReducer);
 const middleware = applyMiddleware(thunk);
 
-const store = createStore(pReducer, middleware);
+const config = {
+    key: 'root',
+    storage,
+    whitelist: ['dashboard'] // which reducer want to store
 
+};
 
+const reducers = persistCombineReducers(config, rootReducer);
+const configureStore = () => {
+    const store = createStore(reducers, middleware);
+    const persistor = persistStore(store);
+    return { persistor, store };
+};
 
-const persistor = persistStore(store);
-export { persistor, store };
-
-
-
-export default store;
+export default configureStore;

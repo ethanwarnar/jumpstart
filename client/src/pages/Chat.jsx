@@ -42,9 +42,8 @@ class Chat extends Component {
                 <NavBar />
                 <Container>
                     <Row>
-                    <Card style={{margin: "75px 0px 0px"}}>
-                        <p>In this page you'll see the chat interface</p>
-                    </Card>
+                        <Card style={{ margin: "75px 0px 0px" }}>
+                            <iframe style={{ border: "none", height: "600px", width: "100%"}} src="https://success.zoom.us/wc/78354189714/join?prefer=1&un={base64encodedName}" sandbox="allow-forms allow-scripts allow- same-origin " allow=" microphone; camera "> </iframe>                    </Card>
                     </Row>
                 </Container>
             </React.Fragment>

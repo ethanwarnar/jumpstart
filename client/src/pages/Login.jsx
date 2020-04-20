@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { render } from "react-dom";
 import { StudentLanding, RecruiterLanding } from '../components'
 import styled from 'styled-components'
@@ -32,6 +32,9 @@ import {
     CustomInput
 } from 'reactstrap';
 
+import { MdLocalCafe, MdAdd } from "react-icons/md"
+
+
 import { isStudent, isProfessional } from '../redux/actions.js'
 const Container = styled.div.attrs({
     className: 'container',
@@ -40,7 +43,7 @@ const Container = styled.div.attrs({
 `
 const NavContainer = styled.div.attrs({
     className: 'container',
-})`height:75px`
+})``
 
 
 const mapStateToProps = state => {
@@ -52,6 +55,7 @@ const mapStateToProps = state => {
 }
 
 class Login extends Component {
+
     constructor(props) {
         super(props);
 
@@ -59,9 +63,16 @@ class Login extends Component {
             name: "React",
             showStudentLanding: true,
             showRecruiterLanding: false,
+            isOpen: false,
+            setIsOpen: false
         };
         this.showComponent = this.showComponent.bind(this);
     }
+
+    componentWillMount() {
+        this.props.isLoggedIn(false)
+    }
+
 
     showComponent(name) {
         switch (name) {
@@ -93,60 +104,64 @@ class Login extends Component {
         const { showStudentLanding, showRecruiterLanding } = this.state;
         return (
             <React.Fragment>
-                <Container>
+                <NavContainer>
+
                     <Navbar style={{ backgroundColor: "#FFF3E2" }} fixed="top" light expand="md">
-                        <NavContainer>
-                            <Col sm>
-                                <NavbarBrand href="/">
-                                    <img
-                                        style={{ marginRight: "20px" }}
-                                        alt=""
-                                        src={logo}
-                                        width="50"
-                                        height="50"
-                                    />{'  '}
-                                    Macchiato
-                        </NavbarBrand>
-                            </Col>
-                            <Col >
-                                <Nav style={{ backgroundColor: '#00000' }} className="mr-auto right" navbar>
-                                    <Col sm="3"></Col>
-                                    <Button
-                                        style={{
-                                            color: "black",
-                                            borderColor: "#fff3e2",
-                                            backgroundColor: "#fff3e2",
-                                            width: "175px",
-                                            fontSize: "15px",
-                                            margin: "25px"
-                                        }}
-                                        onClick={() => this.showComponent("studentLanding")}>
-                                        Student
-                                    </Button>
-                                    <Button
-                                        style={{
-                                            color: "black",
-                                            borderColor: "#fff3e2",
-                                            backgroundColor: "#fff3e2",
-                                            width: "175px",
-                                            fontSize: "15px",
-                                            margin: "25px"
-                                        }}
-                                        onClick={() => this.showComponent("recruiterLanding")}>
-                                        Professionals
-                                    </Button>
-                                    <Button color="secondary"
-                                        style={{ color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "175px", fontSize: "15px", margin: "25px" }}
-                                        onClick={() => this.showComponent("recruiterLanding")}>
-                                        Login
-                                    </Button>
+                        <Container>
+                            <Col sm="1" />
+                            <NavbarBrand style={{ fontSize: "23px" }} href="/">
+                                <MdLocalCafe style={{ transform: "scaleX(-1)", width: "45", height: "45" }} />
+                                <MdAdd style={{ color: "#FFA824", height: "25px", width: "25px" }} />
+                                <MdLocalCafe style={{ width: "45", height: "45", marginRight: "20px" }} />
+                                Macchiato
+                                </NavbarBrand>
+                            <NavbarToggler onClick={() => this.setState({ isOpen: !this.state.isOpen })} />
 
-                                </Nav>
-                            </Col>
-                        </NavContainer>
+                            <Collapse style={{ textAlign: "center" }} isOpen={this.state.isOpen} navbar>
+
+                                <Col >
+                                    <Nav style={{ backgroundColor: '#00000' }} className="mr-auto right" navbar>
+                                        <Col sm="4"></Col>
+                                        <Button
+                                            style={{
+                                                color: "black",
+                                                borderColor: "#fff3e2",
+                                                backgroundColor: "#fff3e2",
+                                                width: "125px",
+                                                fontSize: "17px",
+                                                margin: "5px 25px"
+                                            }}
+                                            onClick={() => this.showComponent("studentLanding")}>
+                                            Students
+                                    </Button>
+                                        <Button
+                                            style={{
+                                                color: "black",
+                                                borderColor: "#fff3e2",
+                                                backgroundColor: "#fff3e2",
+                                                width: "125px",
+                                                fontSize: "17px",
+                                                margin: "5px 25px"
+                                            }}
+                                            onClick={() => this.showComponent("recruiterLanding")}>
+                                            Professionals
+                                    </Button>
+                                        {/* <Button color="secondary"
+                                            style={{ color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "17px", margin: "5px 25px" }}
+                                            onClick={() => this.showComponent("recruiterLanding")}>
+                                            Login
+                                        </Button> */}
+
+                                    </Nav>
+                                </Col>
+                            </Collapse>
+                        </Container>
+
+
                     </Navbar>
+                </NavContainer>
 
-                </Container>
+
 
 
                 <Container>
@@ -163,7 +178,8 @@ class Login extends Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         updateStudent: (bool) => dispatch(isStudent(bool)),
-        updateProfessional: (bool) => dispatch(isProfessional(bool))
+        updateProfessional: (bool) => dispatch(isProfessional(bool)),
+        isLoggedIn: (bool) => dispatch({ type: "IS_LOGGED_IN", payload: bool })
     }
 }
 
