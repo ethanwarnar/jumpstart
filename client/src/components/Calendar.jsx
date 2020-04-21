@@ -3,37 +3,34 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction' // needed for dayClick
+import { connect } from 'react-redux'
 
 import '../style/main.scss'
 
-export default class Calendar extends React.Component {
-//     render() {
-//         return (
-//             <div style={{ height: "800px" }}>
-//                 <iframe
-//                     src="https://calendly.com/ethanwarnar/"
-//                     width="100%"
-//                     height="100%"
-//                     frameborder="0"
-//                 ></iframe>
-//             </div>
-//         );
-//     };
-// }
+
+const mapStateToProps = state => {
+    const { dashboard } = state
+    return {
+        calendarArray: dashboard.calendarArray.array
+    }
+}
+class Calendar extends React.Component {
 
     calendarComponentRef = React.createRef()
     state = {
         calendarWeekends: true,
-        calendarEvents: [
-            { title: 'event 1', date: '2020-04-01' },
-            { title: 'event 2', date: '2020-04-02' },
-            { title: 'event 1', date: '2020-04-25' },
-            { title: 'event 2', date: '2020-04-22' },
-            { title: 'event 1', date: '2020-04-13' },
-            { title: 'event 2', date: '2020-04-15' },
-            { title: 'event 1', date: '2020-04-07' },
-            { title: 'event 2', date: '2020-04-04' },
-        ]
+        calendarEvents: this.props.calendarArray
+
+
+        // { title: 'event 1', date: '2020-04-01' },
+        // { title: 'event 2', date: '2020-04-02' },
+        // { title: 'event 1', date: '2020-04-25' },
+        // { title: 'event 2', date: '2020-04-22' },
+        // { title: 'event 1', date: '2020-04-13' },
+        // { title: 'event 2', date: '2020-04-15' },
+        // { title: 'event 1', date: '2020-04-07' },
+        // { title: 'event 2', date: '2020-04-04' },
+
     }
 
     render() {
@@ -84,6 +81,16 @@ export default class Calendar extends React.Component {
     //                 allDay: arg.allDay
     //             })
     //         })
-        }
-    
+}
 
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Calendar) 

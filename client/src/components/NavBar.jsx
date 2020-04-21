@@ -28,7 +28,7 @@ import { Redirect } from "react-router-dom"
 
 import '../style/main.scss'
 
-import { MdLocalCafe, MdDashboard, MdEvent, MdAccountCircle, MdGroup, MdAdd } from "react-icons/md"
+import { MdPerson,MdLocalCafe, MdDashboard, MdEvent, MdAccountCircle, MdGroup, MdAdd } from "react-icons/md"
 
 const Container = styled.div.attrs({
     className: 'container',
@@ -106,7 +106,7 @@ class NavBar extends Component {
                                         <NavLink style={{ fontSize: "17px" }} href="/macchiato/chat">Networking</NavLink>
                                     </NavItem>
                                     <NavItem style={{ margin: "0px 25px " }}>
-                                        <MdAccountCircle style={{ width: "30", height: "30" }} />
+                                        <MdPerson style={{ width: "30", height: "30" }} />
                                         <NavLink style={{ fontSize: "17px" }} href="/macchiato/profile">Profile</NavLink>
                                     </NavItem>
                                     <NavItem>

@@ -1,5 +1,5 @@
 import { isStudent, isProfessional } from './actions.js'
-import {REHYDRATE} from 'redux-persist'
+import { REHYDRATE } from 'redux-persist'
 
 
 const initialState = {
@@ -10,15 +10,10 @@ const initialState = {
         firstName: '',
     },
     eventArray: {
-        array: [
-            {
-                name:"",
-
-            },
-            {
-                name:"",
-            }
-        ]
+        array: []
+    },
+    calendarArray: {
+        array: []
     }
 }
 
@@ -27,6 +22,19 @@ function addNewEvent(array, event) {
     array.push(event)
     // console.log(array)
     return array
+}
+
+function parseEvent(event) {
+    var obj = {
+        title:"",
+        date:""
+    }
+    obj.title=event.name
+
+    var msec = Date.parse(event.date);
+    var d = new Date(msec);
+    obj.date=d.toISOString().slice(0,10)
+    return obj
 }
 
 const dashboard = (state = initialState, action) => {
@@ -60,23 +68,18 @@ const dashboard = (state = initialState, action) => {
         }
         case 'ADD_EVENT': {
 
-            // state.eventArray.array.push(action.payload)
-            // array.push(action.payload)
-            // var newEventArray = addNewEvent(state.eventArray.array, action.payload)
-            // var newArray = state.eventArray.push(action.payload)
+            var calendarObj = parseEvent(action.payload);
 
             return {
                 ...state,
                 eventArray: {
                     array: state.eventArray.array.concat(action.payload)
+                },
+                calendarArray: {
+                    array: state.calendarArray.array.concat(calendarObj)
                 }
             }
-        }
-        // case REHYDRATE:
-        //     var incoming = action.payload.dashboard; // Carts is the name of the reducer
-        //     if (incoming) return {...state, ...incoming};
-        //     return state;
-        
+        }    
         default:
             return state
     }

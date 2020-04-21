@@ -128,7 +128,7 @@ class Login extends Component {
                                                 borderColor: "#fff3e2",
                                                 backgroundColor: "#fff3e2",
                                                 width: "125px",
-                                                fontSize: "17px",
+                                                fontSize: "18px",
                                                 margin: "5px 25px"
                                             }}
                                             onClick={() => this.showComponent("studentLanding")}>
@@ -140,7 +140,7 @@ class Login extends Component {
                                                 borderColor: "#fff3e2",
                                                 backgroundColor: "#fff3e2",
                                                 width: "125px",
-                                                fontSize: "17px",
+                                                fontSize: "18px",
                                                 margin: "5px 25px"
                                             }}
                                             onClick={() => this.showComponent("recruiterLanding")}>

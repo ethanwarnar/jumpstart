@@ -1,9 +1,9 @@
 let events = [
     {
-        name: "Design Thinking Seminar",
+        name: "Design Thinking",
         host: "Bryan Tran",
         company: "Jumpstart",
-        date: "April 24, 2020",
+        date: "April 11, 2020",
         time: "3PM - 5PM",
         link: ""
     },
@@ -19,14 +19,14 @@ let events = [
         name: "Virtual Coffee Chats",
         host: "Sam Walsh",
         company: "Jumpstart",
-        date: "April 24, 2020",
+        date: "April 18, 2020",
         time: "3PM - 5PM",
         link: ""
     }, {
         name: "Recruiter AMA Session",
-        host: "Jessica McKenzie",
+        host: "Jess McKenzie",
         company: "Scotiabank",
-        date: "April 24, 2020",
+        date: "April 16, 2020",
         time: "3PM - 5PM",
         link: ""
     },
@@ -34,7 +34,7 @@ let events = [
         name: "The Art of Power Naps",
         host: "Seoyoon Kim",
         company: "Scotiabank",
-        date: "April 24, 2020",
+        date: "April 15, 2020",
         time: "3PM - 5PM",
         link: ""
     },
@@ -42,7 +42,7 @@ let events = [
         name: "Recruiter AMA Session",
         host: "Arina Levko",
         company: "Scotiabank",
-        date: "April 24, 2020",
+        date: "April 13, 2020",
         time: "3PM - 5PM",
         link: "",
     },
@@ -50,7 +50,7 @@ let events = [
         name: "Intro to SQL Workshop",
         host: "Seoyoon Kim",
         company: "Scotiabank",
-        date: "April 24, 2020",
+        date: "April 12, 2020",
         time: "3PM - 5PM",
         link: ""
     },
@@ -58,7 +58,7 @@ let events = [
         name: "The Art of Cappucinos",
         host: "Ethan Warnar",
         company: "Scotiabank",
-        date: "April 24, 2020",
+        date: "April 19, 2020",
         time: "3PM - 5PM",
         link: ""
     },
@@ -66,7 +66,7 @@ let events = [
         name: "Learning React Redux",
         host: "Ethan Warnar",
         company: "Scotiabank",
-        date: "April 24, 2020",
+        date: "April 29, 2020",
         time: "3PM - 5PM",
         link: ""
     },
@@ -74,7 +74,7 @@ let events = [
         name: "Guide to Product Management",
         host: "Seoyoon Kim",
         company: "Scotiabank",
-        date: "April 24, 2020",
+        date: "April 4, 2020",
         time: "3PM - 5PM",
         link: ","
     },
@@ -90,7 +90,7 @@ let events = [
         name: "Learning C++",
         host: "Ethan Warnar",
         company: "Scotiabank",
-        date: "April 24, 2020",
+        date: "April 2, 2020",
         time: "3PM - 5PM",
         link: ""
     },

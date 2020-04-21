@@ -17,6 +17,7 @@ import {
     Col,
     Row,
     Card,
+    CardHeader,
     CardBody,
     CardTitle,
     CardSubtitle,
@@ -42,8 +43,46 @@ class Chat extends Component {
                 <NavBar />
                 <Container>
                     <Row>
-                        <Card style={{ margin: "75px 0px 0px" }}>
-                            <iframe style={{ border: "none", height: "600px", width: "100%"}} src="https://success.zoom.us/wc/78354189714/join?prefer=1&un={base64encodedName}" sandbox="allow-forms allow-scripts allow- same-origin " allow=" microphone; camera "> </iframe>                    </Card>
+                        {/* body outline style={{ borderRadius: "18px", justifyContent: "center", height: "80px", borderColor: "#FFA824", margin: "16vh 0px 0px", borderWidth: "3px" }} */}
+                        <Col sm="4">
+                            <Card style={{ borderWidth: "3px", borderColor: "#FFA824", borderRadius: "10px", margin: "16vh 0px 0px", }}>
+                                <CardHeader>Test</CardHeader>
+                                <div style={{ height: "500px" }}>
+                                    <iframe
+                                        src="https://calendly.com/ethanwarnar/"
+                                        width="100%"
+                                        height="95%"
+                                        frameborder="0"
+                                    ></iframe>
+                                </div>
+                            </Card>
+                        </Col>
+                        <Col sm="4">
+                            <Card style={{ borderWidth: "3px", borderColor: "#FFA824", borderRadius: "10px", margin: "16vh 0px 0px", }}>
+                                <CardHeader>Test</CardHeader>
+                                <div style={{ height: "500px" }}>
+                                    <iframe
+                                        src="https://calendly.com/ethanwarnar/"
+                                        width="100%"
+                                        height="95%"
+                                        frameborder="0"
+                                    ></iframe>
+                                </div>
+                            </Card>
+                        </Col>
+                        <Col sm="4">
+                            <Card style={{ borderWidth: "3px", borderColor: "#FFA824", borderRadius: "10px", margin: "16vh 0px 0px", }}>
+                                <CardHeader>Test</CardHeader>
+                                <div style={{ height: "500px" }}>
+                                    <iframe
+                                        src="https://calendly.com/ethanwarnar/"
+                                        width="100%"
+                                        height="95%"
+                                        frameborder="0"
+                                    ></iframe>
+                                </div>
+                            </Card>
+                        </Col>
                     </Row>
                 </Container>
             </React.Fragment>
