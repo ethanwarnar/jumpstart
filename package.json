@@ -2,6 +2,10 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.9.0",
+    "node": "10.15.3"
+  },
   "dependencies": {
     "@fullcalendar/core": "^4.4.0",
     "@fullcalendar/daygrid": "^4.4.0",
@@ -31,7 +35,7 @@
     "styled-components": "^5.1.0"
   },
   "scripts": {
-    "start": "PORT=8000 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
