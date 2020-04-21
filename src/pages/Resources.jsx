@@ -137,7 +137,7 @@ class Resources extends Component {
                 <Container>
                     <Row>
                         <Col sm="4">
-                            <Card body inverse style={{ borderColor: "#FFA824", justifyContent: "center", borderRadius: "18px", height: "50px", backgroundColor: "#FFA824", margin: "18vh 0px 0px", }} >
+                            <Card body inverse style={{ borderColor: "#FFA824", justifyContent: "center", borderRadius: "18px", height: "50px", backgroundColor: "#FFA824", margin: "16vh 0px 0px", }} >
                                 <CardText style={{ fontSize: "25px", textAlign: "center" }}>
                                     {this.props.eventArray.length} events added to calendar.
                                 </CardText>

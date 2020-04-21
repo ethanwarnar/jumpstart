@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
+import { isStudent, isProfessional } from '../redux/actions.js'
 
 import {
     Collapse,
@@ -30,7 +32,15 @@ import {
     FormText
 } from 'reactstrap';
 
-import { NavBar } from '../components'
+import { NavBar, StudentEditProfile } from '../components'
+
+const mapStateToProps = state => {
+    const { dashboard } = state
+    return {
+        isStudent: dashboard.isStudent,
+        isProfessional: dashboard.isProfessional
+    }
+}
 
 const Container = styled.div.attrs({
     className: 'container',
@@ -43,20 +53,29 @@ class Profile extends Component {
         return (
             <React.Fragment>
                 <NavBar />
-                <Container>
-                    <Row>
-
-                        <Card style={{ margin: "75px 0px 0px" }}>
-                            <CardBody>
-                                <CardText style={{ fontSize: "20px", textAlign: "center" }}>Profile Page</CardText>
-
-                            </CardBody>
-                        </Card>
-                    </Row>
+                <Container >
+                    <div style={{
+                        position: 'absolute', left: '50%', top: '50%',
+                        transform: 'translate(-50%, -50%)',
+                    }}>
+                        {this.props.isStudent && <StudentEditProfile />}
+                        {/* {this.props.isProfessional && <RecruiterLanding />} */}
+                    </div>
                 </Container>
             </React.Fragment>
         )
     }
 }
 
-export default Profile
+const mapDispatchToProps = (dispatch) => {
+    return {
+        updateStudent: (bool) => dispatch(isStudent(bool)),
+        updateProfessional: (bool) => dispatch(isProfessional(bool)),
+        isLoggedIn: (bool) => dispatch({ type: "IS_LOGGED_IN", payload: bool })
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Profile)

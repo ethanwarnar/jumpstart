@@ -58,13 +58,11 @@ class StudentProfile extends Component {
         this.submitProfile = this.submitProfile.bind(this);
     }
 
-    componentWillMount() {
-        this.props.setLoggedIn(false)
-    }
+   
 
     submitProfile() {
         this.props.setLoggedIn(true)
-        // return <Redirect to='/jumpstart/home'/>
+        this.props.updateStudent(true)       // return <Redirect to='/jumpstart/home'/>
     }
 
     render() {
@@ -78,7 +76,7 @@ class StudentProfile extends Component {
 
             <React.Fragment>
 
-                <div style={{ textAlign: "center" }}>
+                <div style={{ display:"inline-block" }}>
                     <Form>
                         <FormGroup row>
                             <Label for="exampleText" sm={4}>First Name</Label>
