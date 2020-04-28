@@ -1,5 +1,48 @@
 @charset "UTF-8";
 
+
+
+.button{
+  background-color: rgb(255, 243, 226);
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  font-size: 18px;
+  border-width: 2px;
+  font-family: 'poppins';
+
+
+}
+
+.button:hover{
+  background-color:#FFA824; 
+}
+
+
+.nav-button{
+  color:black;
+  transition-duration: 0.4s;
+  border-radius: 0px;
+  outline: "none";
+  font-family: 'poppins';
+
+
+}
+
+.nav-button:hover{
+  color:rgb(235, 141, 0);
+  outline: "none",
+
+}
+
+.nav-button:focus{
+  color:rgb(235, 141, 0);
+  outline: "none",
+
+
+}
+
+
+
 .color-nav{
   background-color: #000;
 }

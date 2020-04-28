@@ -7,15 +7,8 @@ import { AppWrapper } from '../routes/AppWrapper'
 
 import { Redirect } from 'react-router-dom'
 
-
-
-
-
 class RouterLogic extends Component {
-
-
     render() {
-
         return (
             <React.Fragment>
                 <Router>

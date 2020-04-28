@@ -12,6 +12,8 @@ import { connect } from 'react-redux'
 import { RouterLogic } from '../components'
 import { PersistGate } from 'redux-persist/integration/react'
 import configureStore from '../redux/store';
+import "typeface-poppins"
+
 const { persistor, store } = configureStore()
 
 

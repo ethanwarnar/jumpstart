@@ -32,7 +32,7 @@ import {
     FormText
 } from 'reactstrap';
 
-import { getStudentFirstName, isStudent } from '../redux/actions.js'
+import { getStudentFirstName, isStudent, isProfessional } from '../redux/actions.js'
 
 
 const Container = styled.div.attrs({
@@ -58,30 +58,32 @@ class StudentProfile extends Component {
         this.submitProfile = this.submitProfile.bind(this);
     }
 
-   
+    componentWillMount() {
+        this.props.setLoggedIn(false)
+    }
 
     submitProfile() {
         this.props.setLoggedIn(true)
-        this.props.updateStudent(true)       // return <Redirect to='/jumpstart/home'/>
+        this.props.updateStudent(true)
+        this.props.updateProfessional(false)
+
     }
 
     render() {
-        // console.log("isloggedin", typeof(this.props.isLoggedIn))
         if (this.props.isLoggedIn) {
             return <Redirect to='/macchiato/dashboard' />
         }
 
-        console.log(this.props.state)
         return (
 
             <React.Fragment>
-
-                <div style={{ display:"inline-block" }}>
+                <div style={{ textAlign: "center" }}>
                     <Form>
                         <FormGroup row>
-                            <Label for="exampleText" sm={4}>First Name</Label>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>First Name</Label>
                             <Col sm={8} >
                                 <Input
+                                    style={{ fontFamily: "poppins", }}
                                     type="text"
                                     name="text"
                                     id="exampleText"
@@ -91,27 +93,21 @@ class StudentProfile extends Component {
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label for="exampleText" sm={4}>Last Name</Label>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>Last Name</Label>
                             <Col sm={8} >
-                                <Input type="text" name="text" id="exampleText" placeholder="please enter your last name" />
+                                <Input style={{ fontFamily: "poppins", }} type="text" name="text" id="exampleText" placeholder="please enter your last name" />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label for="exampleEmail" sm={4}>Email</Label>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleEmail" sm={4}>Email</Label>
                             <Col sm={8}>
-                                <Input type="email" name="email" id="exampleEmail" placeholder="please enter your email" />
+                                <Input style={{ fontFamily: "poppins", }} type="email" name="email" id="exampleEmail" placeholder="please enter your email" />
                             </Col>
                         </FormGroup>
-                        {/* <FormGroup row>
-                            <Label for="examplePassword" sm={3}>Password</Label>
-                            <Col sm={8}>
-                                <Input type="password" name="password" id="examplePassword" placeholder="please enter your password" />
-                            </Col>
-                        </FormGroup> */}
                         <FormGroup row>
-                            <Label for="exampleSelect" sm={4}>Co-op Placement</Label>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleSelect" sm={4}>Co-op Term</Label>
                             <Col sm={4}>
-                                <Input type="select" name="select" id="exampleSelect" placeholder="Term">
+                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Term">
                                     <option>Spring</option>
                                     <option>Summer</option>
                                     <option>Fall</option>
@@ -119,7 +115,7 @@ class StudentProfile extends Component {
                                 </Input>
                             </Col>
                             <Col sm={4}>
-                                <Input type="select" name="select" id="exampleSelect" placeholder="Year">
+                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Year">
                                     <option>2020</option>
                                     <option>2021</option>
                                     <option>2022</option>
@@ -131,9 +127,9 @@ class StudentProfile extends Component {
                         </FormGroup>
 
                         <FormGroup row>
-                            <Label for="exampleSelect" sm={4}>Graduation Date</Label>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleSelect" sm={4}>Graduation Date</Label>
                             <Col sm={4}>
-                                <Input type="select" name="select" id="exampleSelect" placeholder="Term">
+                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Term">
                                     <option>January</option>
                                     <option>February</option>
                                     <option>March</option>
@@ -149,7 +145,7 @@ class StudentProfile extends Component {
                                 </Input>
                             </Col>
                             <Col sm={4}>
-                                <Input type="select" name="select" id="exampleSelect" placeholder="Year">
+                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Year">
                                     <option>2020</option>
                                     <option>2021</option>
                                     <option>2022</option>
@@ -161,9 +157,9 @@ class StudentProfile extends Component {
                         </FormGroup>
 
                         <FormGroup row>
-                            <Label for="exampleSelect" sm={4}>Sector</Label>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleSelect" sm={4}>Sector</Label>
                             <Col sm={8}>
-                                <Input type="select" name="select" id="exampleSelect" placeholder="please select your desired sector">
+                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="please select your desired sector">
                                     <option>Business</option>
                                     <option>Information Technology</option>
                                     <option>Healthcare</option>
@@ -178,25 +174,26 @@ class StudentProfile extends Component {
 
 
                         <FormGroup row>
-                            <Label for="exampleText" sm={4}>University/College</Label>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>University/College</Label>
                             <Col sm={8}>
-                                <Input type="text" name="text" id="exampleText" placeholder="please enter your place of education" />
+                                <Input style={{ fontFamily: "poppins", }} type="text" name="text" id="exampleText" placeholder="please enter your place of education" />
                             </Col>
                         </FormGroup>
 
                         <FormGroup row>
-                            <Label for="exampleText" sm={4}>Fun Fact</Label>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>About</Label>
                             <Col sm={8}>
-                                <Input type="text" name="text" id="exampleText" placeholder="please enter a fun fact" />
+                                <Input style={{ fontFamily: "poppins", }} type="text" name="text" id="exampleText" placeholder="please enter a fun fact" />
                             </Col>
                         </FormGroup>
 
                         <FormGroup row>
                             <Col >
-                                <Button
-                                    style={{ margin: "15px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px" }}
+                                <button className='button'
+                                    style={{ margin: "2vh 0px 0px", color: "black", borderColor: "#FFA824", width: "125px" }}
                                     onClick={() => this.submitProfile(true)}
-                                >Submit</Button>
+                                >Submit
+                                </button>
                             </Col>
                         </FormGroup>
                     </Form>
@@ -211,6 +208,8 @@ const mapDispatchToProps = (dispatch) => {
         updateStudentFirstName: (event) => dispatch({ type: "GET_STUDENT_FIRST_NAME", payload: event.target.value }),
         setLoggedIn: (bool) => dispatch({ type: "IS_LOGGED_IN", payload: bool }),
         updateStudent: (bool) => dispatch(isStudent(bool)),
+        updateProfessional: (bool) => dispatch(isProfessional(bool)),
+
     }
 }
 

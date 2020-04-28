@@ -1,5 +1,6 @@
 import React, { useState, Component } from 'react'
 import styled from 'styled-components'
+import logo from '../logo.png'
 
 import {
     Collapse,
@@ -47,12 +48,7 @@ const Container = styled.div.attrs({
 
 class StudentLanding extends Component {
 
-    // componentWillMount(){
-    //     const toggle = () => setModal(!modal);
-    //     const [modal, setModal] = useState(false);
-    //     const [backdrop, setBackdrop] = useState(true);
-    //     const [keyboard, setKeyboard] = useState(true);
-    // }
+
 
     constructor(props) {
         super(props);
@@ -72,48 +68,48 @@ class StudentLanding extends Component {
     render() {
         return (
             <React.Fragment>
-                <Container>
-                    <Row>
-
-                        <Col sm="6">
-                            <CardText style={{ margin: "32vh 0px 0px", fontSize: "45px", }}>
-                                Connect with industry<br /> professionals worldwide.
+                <Row>
+                    <Col sm="6">
+                        <CardText style={{ fontFamily: "poppins", margin: "31vh 0px 0px", fontSize: "40px", }}>
+                            Connect with industry<br /> professionals worldwide.
                             </CardText>
-                            <CardText style={{ margin: "5vh 0px 0px", fontSize: "25px", }}>
-                                Macchiato is a platform where you can engage with various companies through virtual events.
+                        <CardText style={{ fontFamily: "poppins", margin: "5vh 0px 0px", fontSize: "25px", }}>
+                            Macchiato is a platform where you can engage with various companies through virtual events.
                             </CardText>
-                            <div style={{ textAlign: "center" }}>
-                                <Button color="secondary" onClick={() => this.toggleModal()}
-                                    style={{ margin: "5vh 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px" }}
-                                >
-                                    Register
-                            </Button>
-                            </div>
-                        </Col>
-                        <Col sm="6">
-                            <div style={{ height: "250px", width: "100%", justifyContent: "center", textAlign: "center", margin: "35vh 0px 0px" }}>
-                                <MdLocalCafe style={{ transform: "scaleX(-1)", height: "200px", width: "200px" }} />
-                                <MdAdd style={{ color: "#FFA824", height: "75px", width: "75px" }} />
-                                <MdLocalCafe style={{ height: "200px", width: "200px" }} />
-                            </div>
-                        </Col>
-                    </Row>
-                    <Modal style={{ top: "5vh" }}
-                        isOpen={this.state.showModal}
-                        toggle={() => this.toggleModal()}
-                    >
-                        <ModalHeader> Profile </ModalHeader>
-                        <ModalBody style={{ height: "525px", overflowY: "auto" }}>
-                            <div style={{ overflow: "scoll" }}>
-                                <StudentProfile style={{ overflow: "scroll" }} />
-                            </div>
-                        </ModalBody>
-                        <ModalFooter>
-                            {/* <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
-                            <Button color="secondary" onClick={toggle}>Cancel</Button> */}
-                        </ModalFooter>
-                    </Modal>
-                </Container>
+                        <div style={{ textAlign: "center" }}>
+                            <button className="button" onClick={() => this.toggleModal()}
+                                style={{ margin: "5vh 0px 0px", color: "black", borderColor: "#FFA824", width: "125px" }}
+                            >
+                                Register
+                            </button>
+                        </div>
+                    </Col>
+                    <Col sm="6">
+                        <div style={{ height: "250px", width: "100%", justifyContent: "center", textAlign: "center", margin: "30vh 0px 0px" }}>
+                            <img
+                                alt=""
+                                src={logo}
+                                width="350px"
+                                height="350px"
+                            />{'  '}
+                        </div>
+                    </Col>
+                </Row>
+                <Modal style={{ top: "4vh", width: "550px" }}
+                    isOpen={this.state.showModal}
+                    toggle={() => this.toggleModal()}
+                >
+                    <ModalHeader style={{ fontFamily: "poppins", }}>
+                        Profile
+                    </ModalHeader>
+                    <ModalBody style={{ height: "525px", overflowY: "auto" }}>
+                        <div style={{ overflow: "scoll" }}>
+                            <StudentProfile style={{ overflow: "scroll" }} />
+                        </div>
+                    </ModalBody>
+                    <ModalFooter>
+                    </ModalFooter>
+                </Modal>
             </React.Fragment>
 
         )

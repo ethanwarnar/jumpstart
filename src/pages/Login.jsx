@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 import { render } from "react-dom";
 import { StudentLanding, RecruiterLanding } from '../components'
 import styled from 'styled-components'
-import logo from '../logo.jpg'
+import logo from '../logo.png'
 import { connect } from 'react-redux'
 
 
@@ -29,7 +29,8 @@ import {
     Button,
     FormGroup,
     Label,
-    CustomInput
+    CustomInput,
+    ButtonGroup
 } from 'reactstrap';
 
 import { MdLocalCafe, MdAdd } from "react-icons/md"
@@ -108,8 +109,8 @@ class Login extends Component {
 
                     <Navbar style={{ backgroundColor: "#FFF3E2" }} fixed="top" light expand="md">
                         <Container>
-                            <Col sm="1" />
-                            <NavbarBrand style={{ fontSize: "23px" }} href="/">
+                            {/* <Col sm="1" /> */}
+                            <NavbarBrand style={{ fontFamily:'poppins',fontSize: "23px" }} href="/">
                                 <MdLocalCafe style={{ transform: "scaleX(-1)", width: "45", height: "45" }} />
                                 <MdAdd style={{ color: "#FFA824", height: "25px", width: "25px" }} />
                                 <MdLocalCafe style={{ width: "45", height: "45", marginRight: "20px" }} />
@@ -121,31 +122,36 @@ class Login extends Component {
 
                                 <Col >
                                     <Nav style={{ backgroundColor: '#00000' }} className="mr-auto right" navbar>
-                                        <Col sm="4"></Col>
-                                        <Button
-                                            style={{
-                                                color: "black",
-                                                borderColor: "#fff3e2",
-                                                backgroundColor: "#fff3e2",
-                                                width: "125px",
-                                                fontSize: "18px",
-                                                margin: "5px 25px"
-                                            }}
-                                            onClick={() => this.showComponent("studentLanding")}>
-                                            Students
-                                    </Button>
-                                        <Button
-                                            style={{
-                                                color: "black",
-                                                borderColor: "#fff3e2",
-                                                backgroundColor: "#fff3e2",
-                                                width: "125px",
-                                                fontSize: "18px",
-                                                margin: "5px 25px"
-                                            }}
-                                            onClick={() => this.showComponent("recruiterLanding")}>
-                                            Professionals
-                                    </Button>
+                                        <Col sm="7"></Col>
+                                        <ButtonGroup >
+                                            <button
+                                                autofocus
+                                                className="nav-button"
+                                                style={{
+                                                    borderColor: "#fff3e2",
+                                                    backgroundColor: "#fff3e2",
+                                                    width: "125px",
+                                                    fontSize: "18px",
+                                                    outline: "none",
+                                                    margin: "5px 25px"
+                                                }}
+                                                onClick={() => this.showComponent("studentLanding")}>
+                                                Students
+                                            </button>
+                                            <button
+                                                className="nav-button"
+                                                style={{
+                                                    borderColor: "#fff3e2",
+                                                    backgroundColor: "#fff3e2",
+                                                    width: "125px",
+                                                    fontSize: "18px",
+                                                    margin: "5px 25px",
+                                                    outline: "none"
+                                                }}
+                                                onClick={() => this.showComponent("recruiterLanding")}>
+                                                Professionals
+                                    </button>
+                                        </ButtonGroup>
                                         {/* <Button color="secondary"
                                             style={{ color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "17px", margin: "5px 25px" }}
                                             onClick={() => this.showComponent("recruiterLanding")}>
@@ -156,14 +162,8 @@ class Login extends Component {
                                 </Col>
                             </Collapse>
                         </Container>
-
-
                     </Navbar>
                 </NavContainer>
-
-
-
-
                 <Container>
                     <div>
                         {showStudentLanding && <StudentLanding />}

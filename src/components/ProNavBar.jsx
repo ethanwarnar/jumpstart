@@ -51,7 +51,7 @@ const mapStateToProps = state => {
         eventArray: dashboard.eventArray.array
     }
 }
-class NavBar extends Component {
+class ProNavBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -60,8 +60,6 @@ class NavBar extends Component {
             setIsOpen: false
         };
     }
-
-
 
     render() {
 
@@ -89,34 +87,28 @@ class NavBar extends Component {
                             <Col >
                                 <Nav style={{ backgroundColor: '#00000' }} className="mr-auto right" navbar>
                                     {/* <div style={{ width: "30vh" }} /> */}
-                                    <Col sm="2"></Col>
+                                    <Col sm="4"></Col>
 
                                     <NavItem style={{ margin: "0px 25px " }}>
                                         <MdDashboard href="/macchiato/dashboard" style={{ width: "30", height: "30" }} />
-                                        {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/dashboard">Dashboard</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none", fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/dashboard">Dashboard</a>
+                                        {/* <NavLink style={{ textDecoration: "none",fontSize: "17px" }} href="/macchiato/dashboard">Dashboard</NavLink> */}
+                                        <a className="nav-button" style={{ textDecoration: "none", fontSize: "17px" }} href="/macchiato/dashboard">Dashboard</a>
 
                                     </NavItem>
                                     <NavItem style={{ margin: "0px 25px " }}>
                                         <MdEvent href="/macchiato/resources" style={{ width: "30", height: "30" }} />
-                                        {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/resources">Events</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none", fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/resources">Events</a>
-
-                                    </NavItem>
-                                    <NavItem style={{ margin: "0px 25px " }}>
-                                        <MdGroup href="/macchiato/chat" style={{ width: "30", height: "30" }} />
-                                        {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/chat">Networking</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none",fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/chat">Networking</a>
+                                        {/* <NavLink style={{ fontSize: "17px" }} href="/macchiato/resources">Events</NavLink> */}
+                                        <a className="nav-button" style={{ textDecoration: "none", fontSize: "17px" }} href="/macchiato/resources">Events</a>
 
                                     </NavItem>
                                     <NavItem style={{ margin: "0px 25px " }}>
                                         <MdPerson style={{ width: "30", height: "30" }} />
-                                        {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/profile">Profile</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none",fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/profile">Profile</a>
+                                        {/* <NavLink style={{ fontSize: "17px" }} href="/macchiato/profile">Profile</NavLink> */}
+                                        <a className="nav-button" style={{ textDecoration: "none", fontSize: "17px" }} href="/macchiato/profile">Profile</a>
 
                                     </NavItem>
                                     <NavItem>
-                                        <button className="button"
+                                    <button className="button"
                                             style={{ fontSize: "17px", marginLeft:"30px",margin: "10px", color: "black", borderColor: "#FFA824", width: "100px" }}
 
                                             // style={{ color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", fontSize: "17px", width: "100px", margin: "15px 25px" }}
@@ -149,4 +141,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(NavBar) 
+)(ProNavBar) 

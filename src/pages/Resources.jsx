@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { NavBar } from '../components'
+import { NavBar, ProNavBar } from '../components'
 import { connect } from 'react-redux'
 import { Redirect } from "react-router-dom"
 
@@ -62,7 +62,10 @@ const mapStateToProps = state => {
     return {
         eventArray: dashboard.eventArray.array,
         state: dashboard,
-        isLoggedIn: dashboard.isLoggedIn
+        isLoggedIn: dashboard.isLoggedIn,
+        isStudent: dashboard.isStudent,
+        isProfessional: dashboard.isProfessional,
+
     }
 }
 
@@ -96,28 +99,30 @@ class Resources extends Component {
             }
         }).map(x => {
             return (
-                <Col sm="3">
+                <Col sm="4">
                     <AnimatePresence >
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}>
-                        
-                            <Card body outline style={{ height: "200px", justifyContent: "center", borderWidth: "3px", borderRadius: "18px", borderColor: "#FFA824", margin: "20px 0px 0px" }} >
-                                <div style={{ textAlign: "left" }}>
-                                    <CardTitle style={{ fontWeight:"bold",  fontSize: "18px" }}>{x.name}</CardTitle>
+                            exit={{ opacity: 0 }}>
 
-                                    <CardText style={{ fontSize: "15px" }}>{x.host} - {x.company}</CardText>
-                                    <CardText style={{ fontSize: "15px" }}>{x.date} | {x.time}</CardText>
-                                    {/* <CardText style={{ fontSize: "17px" }}>{x.time}</CardText> */}
-                                </div>
+                            <Card body outline style={{ height: "200px", justifyContent: "center", borderWidth: "3px", borderRadius: "18px", borderColor: "#FFA824", margin: "7px 0px 0px" }} >
+                                {/* <div style={{ textAlign: "left" }}> */}
+                                <CardTitle style={{ textAlign: "center", fontFamily: "poppins", fontWeight: "bold", fontSize: "19px" }}>{x.name}</CardTitle>
+
+                                <CardText style={{ textAlign: "center", fontFamily: "poppins", fontSize: "16px" }}>{x.host} - {x.company}</CardText>
+                                <CardText style={{ textAlign: "center", fontFamily: "poppins", fontSize: "16px" }}>{x.date} | {x.time}</CardText>
+                                {/* <CardText style={{ fontSize: "17px" }}>{x.time}</CardText> */}
+                                {/* </div> */}
                                 <div style={{ textAlign: "center" }}>
-                                    <Button
+                                    <button className="button"
                                         href={x.link} target="_blank"
-                                        style={{ margin: "15px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px", textAlign: "center" }}
+                                        style={{ margin: "5px 0px 0px", color: "black", borderColor: "#FFA824", width: "125px", fontSize: "15px", textAlign: "center" }}
+
+                                        // style={{ margin: "15px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px", textAlign: "center" }}
                                         onClick={() => this.props.addNewEvent(x)}
                                     >Sign Up
-                                    </Button>
+                                    </button>
                                 </div>
                             </Card>
                         </motion.div>
@@ -133,23 +138,24 @@ class Resources extends Component {
 
         return (
             <React.Fragment>
-                <NavBar />
+                {this.props.isStudent && <NavBar />}
+                {this.props.isProfessional && <ProNavBar />}
                 <Container>
                     <Row>
                         <Col sm="4">
-                            <Card body inverse style={{ borderColor: "#FFA824", justifyContent: "center", borderRadius: "18px", height: "50px", backgroundColor: "#FFA824", margin: "16vh 0px 0px", }} >
-                                <CardText style={{ fontSize: "25px", textAlign: "center" }}>
+                            <Card body inverse style={{ borderColor: "#FFA824", justifyContent: "center", borderRadius: "18px", height: "50px", backgroundColor: "#FFA824", margin: "15vh 0px 0px", }} >
+                                <CardText style={{ fontFamily: "poppins", fontSize: "21px", textAlign: "center" }}>
                                     {this.props.eventArray.length} events added to calendar.
                                 </CardText>
                             </Card>
                         </Col>
                         <Col sm="8">
-                            {/* <Card body outline style={{ borderRadius: "18px", justifyContent: "center", height: "80px", borderColor: "#FFA824", margin: "16vh 0px 0px", borderWidth: "3px" }}> */}
-                            <div style={{ margin: "18vh 0px 0px" }}>
-                                <Input onChange={(e) => this.searchSpace(e)} style={{ borderRadius: "18px", borderWidth: "3px", textAlign: "center", color: "black", fontSize: "20px", height: "50px", borderColor: "#FFA824", }} type="text" name="email" id="exampleEmail" placeholder="search by event name, company or host" />
+                            <div style={{ margin: "15vh 0px 0px" }}>
+                                <Input onChange={(e) => this.searchSpace(e)} style={{ fontFamily: "poppins", borderRadius: "18px", borderWidth: "3px", textAlign: "center", color: "black", fontSize: "20px", height: "50px", borderColor: "#FFA824", }} type="text" name="email" id="exampleEmail" placeholder="search by event name, company or host" />
                             </div>
                         </Col>
                     </Row>
+
 
                     <Events style={{ marginTop: "30px", height: "550px", overflowY: "auto" }}>
                         <Row>

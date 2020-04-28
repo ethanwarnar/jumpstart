@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 
-import logo from '../logo.jpg'
+import logo from '../logo.png'
 
 const Wrapper = styled.a.attrs({
     className: 'navbar-brand d-none d-lg-inline-block',

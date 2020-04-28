@@ -5,7 +5,7 @@ let events = [
         company: "Jumpstart",
         date: "April 11, 2020",
         time: "3PM - 5PM",
-        link: ""
+        link: "https://calendly.com/macchiatoo/design-thinking"
     },
     {
         name: "Jumpstart Career Fair",
@@ -13,54 +13,54 @@ let events = [
         company: "Jumpstart",
         date: "May 4, 2020",
         time: "11AM - 12PM",
-        link: ""
+        link: "https://calendly.com/macchiatoo/jumpstart-career-fair"
     },
     {
         name: "Virtual Coffee Chats",
         host: "Sam Walsh",
         company: "Jumpstart",
-        date: "April 18, 2020",
+        date: "April 30, 2020",
         time: "3PM - 5PM",
-        link: ""
+        link: "https://calendly.com/macchiatoo/virtual-coffee-chats"
     }, {
         name: "Recruiter AMA Session",
         host: "Jess McKenzie",
         company: "Scotiabank",
-        date: "April 16, 2020",
+        date: "April 29, 2020",
         time: "3PM - 5PM",
-        link: ""
+        link: "https://calendly.com/macchiatoo/recruiter-ama-session"
     },
     {
         name: "The Art of Power Naps",
         host: "Seoyoon Kim",
         company: "Scotiabank",
-        date: "April 15, 2020",
+        date: "May 1, 2020",
         time: "3PM - 5PM",
-        link: ""
+        link: "https://calendly.com/macchiatoo/the-art-of-power-naps"
     },
     {
         name: "Recruiter AMA Session",
-        host: "Arina Levko",
+        host: "Seoyoon Kim",
         company: "Scotiabank",
-        date: "April 13, 2020",
+        date: "April 28, 2020",
         time: "3PM - 5PM",
-        link: "",
+        link: "https://calendly.com/macchiatoo/recruiter-ama-session-1",
     },
     {
         name: "Intro to SQL Workshop",
         host: "Seoyoon Kim",
         company: "Scotiabank",
-        date: "April 12, 2020",
+        date: "April 24, 2020",
         time: "3PM - 5PM",
-        link: ""
+        link: "https://calendly.com/macchiatoo/into-to-sql-workshop"
     },
     {
         name: "The Art of Cappucinos",
         host: "Ethan Warnar",
         company: "Scotiabank",
-        date: "April 19, 2020",
+        date: "May 4, 2020",
         time: "3PM - 5PM",
-        link: ""
+        link: "https://calendly.com/macchiatoo/the-art-of-cappucinos"
     },
     {
         name: "Learning React Redux",
@@ -68,18 +68,18 @@ let events = [
         company: "Scotiabank",
         date: "April 29, 2020",
         time: "3PM - 5PM",
-        link: ""
+        link: "https://calendly.com/macchiatoo/learning-react-redux"
     },
     {
         name: "Guide to Product Management",
         host: "Seoyoon Kim",
         company: "Scotiabank",
-        date: "April 4, 2020",
+        date: "May 2, 2020",
         time: "3PM - 5PM",
-        link: ","
+        link: "https://calendly.com/macchiatoo/guide-to-product-management"
     },
     {
-        name: "React + Redux",
+        name: "Redux Seminar",
         host: "Ethan Warnar",
         company: "Scotiabank",
         date: "April 24, 2020",
@@ -90,9 +90,9 @@ let events = [
         name: "Learning C++",
         host: "Ethan Warnar",
         company: "Scotiabank",
-        date: "April 2, 2020",
+        date: "May 3, 2020",
         time: "3PM - 5PM",
-        link: ""
+        link: "https://calendly.com/macchiatoo/learning-c"
     },
 
 ];

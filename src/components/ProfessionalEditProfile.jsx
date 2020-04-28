@@ -32,7 +32,7 @@ import {
     FormText
 } from 'reactstrap';
 
-import { getStudentFirstName, isStudent } from '../redux/actions.js'
+import { getStudentFirstName, isProfessional } from '../redux/actions.js'
 
 
 const Container = styled.div.attrs({
@@ -52,7 +52,7 @@ const mapStateToProps = state => {
     }
 }
 
-class StudentEditProfile extends Component {
+class ProfessionalEditProfile extends Component {
     constructor(props) {
         super(props);
         this.submitProfile = this.submitProfile.bind(this);
@@ -60,17 +60,17 @@ class StudentEditProfile extends Component {
 
     submitProfile() {
         this.props.setLoggedIn(true)
-        this.props.updateStudent(true)       
+        this.props.updateProfessional(true)
     }
 
-    render() {
-        console.log(this.props.state)
-        return (
 
+    render() {
+        return (
             <React.Fragment>
-                <Card body outline style={{ width: "575px", borderRadius: "18px", textAlign: "center", height: "550px", borderColor: "#FFA824", margin: "15vh 0px 0px", borderWidth: "3px" }}>
-                    <div style={{ textAlign: "center" }}>
-                    <Form>
+                <Card body outline style={{ width: "575px", borderRadius: "18px", textAlign: "center", height: "550px", borderColor: "#FFA824", margin: "18vh 0px 0px", borderWidth: "3px" }}>
+
+                <div style={{ textAlign: "center" }}>
+                <Form>
                         <FormGroup row>
                             <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>First Name</Label>
                             <Col sm={8} >
@@ -97,54 +97,16 @@ class StudentEditProfile extends Component {
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleSelect" sm={4}>Co-op Term</Label>
-                            <Col sm={4}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Term">
-                                    <option>Spring</option>
-                                    <option>Summer</option>
-                                    <option>Fall</option>
-                                    <option>Winter</option>
-                                </Input>
-                            </Col>
-                            <Col sm={4}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Year">
-                                    <option>2020</option>
-                                    <option>2021</option>
-                                    <option>2022</option>
-                                    <option>2023</option>
-                                    <option>2024</option>
-                                    <option>2025</option>
-                                </Input>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleEmail" sm={4}>Calendly Link</Label>
+                            <Col sm={8}>
+                                <Input style={{ fontFamily: "poppins", }}type="email" name="email" id="exampleEmail" placeholder="ex. calendly.com/name" />
                             </Col>
                         </FormGroup>
 
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleSelect" sm={4}>Graduation Date</Label>
-                            <Col sm={4}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Term">
-                                    <option>January</option>
-                                    <option>February</option>
-                                    <option>March</option>
-                                    <option>April</option>
-                                    <option>May</option>
-                                    <option>June</option>
-                                    <option>July</option>
-                                    <option>August</option>
-                                    <option>September</option>
-                                    <option>October</option>
-                                    <option>November</option>
-                                    <option>December</option>
-                                </Input>
-                            </Col>
-                            <Col sm={4}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Year">
-                                    <option>2020</option>
-                                    <option>2021</option>
-                                    <option>2022</option>
-                                    <option>2023</option>
-                                    <option>2024</option>
-                                    <option>2025</option>
-                                </Input>
+                            <Label style={{ fontFamily: "poppins", }} for="exampleEmail" sm={4}>Company</Label>
+                            <Col sm={8}>
+                                <Input style={{ fontFamily: "poppins", }} type="text" name="email" id="exampleEmail" placeholder="please enter your company name" />
                             </Col>
                         </FormGroup>
 
@@ -164,24 +126,16 @@ class StudentEditProfile extends Component {
                             </Col>
                         </FormGroup>
 
-
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>University/College</Label>
+                            <Label style={{ fontFamily: "poppins", }}for="exampleText" sm={4}>Fun Fact</Label>
                             <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }} type="text" name="text" id="exampleText" placeholder="please enter your place of education" />
-                            </Col>
-                        </FormGroup>
-
-                        <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>About</Label>
-                            <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }} type="text" name="text" id="exampleText" placeholder="please enter a fun fact" />
+                                <Input style={{ fontFamily: "poppins", }}type="text" name="text" id="exampleText" placeholder="please enter a fun fact" />
                             </Col>
                         </FormGroup>
 
                         <FormGroup row>
                             <Col >
-                                <button className='button'
+                                <button className="button"
                                     style={{ margin: "2vh 0px 0px", color: "black", borderColor: "#FFA824", width: "125px" }}
                                     onClick={() => this.submitProfile(true)}
                                 >Submit
@@ -189,11 +143,8 @@ class StudentEditProfile extends Component {
                             </Col>
                         </FormGroup>
                     </Form>
-                    </div>
+                </div>
                 </Card>
-                {/* </div> */}
-
-
             </React.Fragment>
         )
     }
@@ -203,12 +154,11 @@ const mapDispatchToProps = (dispatch) => {
     return {
         updateStudentFirstName: (event) => dispatch({ type: "GET_STUDENT_FIRST_NAME", payload: event.target.value }),
         setLoggedIn: (bool) => dispatch({ type: "IS_LOGGED_IN", payload: bool }),
-        updateStudent: (bool) => dispatch(isStudent(bool)),
+        updateProfessional: (bool) => dispatch(isProfessional(bool)),
     }
 }
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(StudentEditProfile)
-
+)(ProfessionalEditProfile)

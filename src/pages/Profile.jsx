@@ -32,7 +32,7 @@ import {
     FormText
 } from 'reactstrap';
 
-import { NavBar, StudentEditProfile } from '../components'
+import { ProNavBar, NavBar, StudentEditProfile, ProfessionalEditProfile } from '../components'
 
 const mapStateToProps = state => {
     const { dashboard } = state
@@ -49,17 +49,20 @@ const Container = styled.div.attrs({
 `
 
 class Profile extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <React.Fragment>
-                <NavBar />
-                <Container >
+            {this.props.isStudent && <NavBar/>}
+            {this.props.isProfessional && <ProNavBar/>}                <Container >
                     <div style={{
-                        position: 'absolute', left: '50%', top: '50%',
-                        transform: 'translate(-50%, -50%)',
+                        position: 'absolute', left: '50%',
+                        transform: 'translate(-50%)',
                     }}>
                         {this.props.isStudent && <StudentEditProfile />}
-                        {/* {this.props.isProfessional && <RecruiterLanding />} */}
+                        {this.props.isProfessional && <ProfessionalEditProfile />}
                     </div>
                 </Container>
             </React.Fragment>
