@@ -70,10 +70,10 @@ class StudentLanding extends Component {
             <React.Fragment>
                 <Row>
                     <Col sm="6">
-                        <CardText style={{ fontFamily: "poppins", margin: "31vh 0px 0px", fontSize: "40px", }}>
+                        <CardText style={{ fontFamily: "'Poppins', sans-serif;", margin: "31vh 0px 0px", fontSize: "40px", }}>
                             Connect with industry<br /> professionals worldwide.
                             </CardText>
-                        <CardText style={{ fontFamily: "poppins", margin: "5vh 0px 0px", fontSize: "25px", }}>
+                        <CardText style={{ fontFamily: "'Poppins', sans-serif;", margin: "5vh 0px 0px", fontSize: "25px", }}>
                             Macchiato is a platform where you can engage with various companies through virtual events.
                             </CardText>
                         <div style={{ textAlign: "center" }}>
@@ -99,7 +99,7 @@ class StudentLanding extends Component {
                     isOpen={this.state.showModal}
                     toggle={() => this.toggleModal()}
                 >
-                    <ModalHeader style={{ fontFamily: "poppins", }}>
+                    <ModalHeader style={{ fontFamily: "po'Poppins', sans-serif;ppins", }}>
                         Profile
                     </ModalHeader>
                     <ModalBody style={{ height: "525px", overflowY: "auto" }}>

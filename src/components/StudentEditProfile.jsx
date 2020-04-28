@@ -72,10 +72,10 @@ class StudentEditProfile extends Component {
                     <div style={{ textAlign: "center" }}>
                     <Form>
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>First Name</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleText" sm={4}>First Name</Label>
                             <Col sm={8} >
                                 <Input
-                                    style={{ fontFamily: "poppins", }}
+                                    style={{ fontFamily: "'Poppins', sans-serif;", }}
                                     type="text"
                                     name="text"
                                     id="exampleText"
@@ -85,21 +85,21 @@ class StudentEditProfile extends Component {
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>Last Name</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleText" sm={4}>Last Name</Label>
                             <Col sm={8} >
-                                <Input style={{ fontFamily: "poppins", }} type="text" name="text" id="exampleText" placeholder="please enter your last name" />
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="text" name="text" id="exampleText" placeholder="please enter your last name" />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleEmail" sm={4}>Email</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleEmail" sm={4}>Email</Label>
                             <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }} type="email" name="email" id="exampleEmail" placeholder="please enter your email" />
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="email" name="email" id="exampleEmail" placeholder="please enter your email" />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleSelect" sm={4}>Co-op Term</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleSelect" sm={4}>Co-op Term</Label>
                             <Col sm={4}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Term">
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="select" name="select" id="exampleSelect" placeholder="Term">
                                     <option>Spring</option>
                                     <option>Summer</option>
                                     <option>Fall</option>
@@ -107,7 +107,7 @@ class StudentEditProfile extends Component {
                                 </Input>
                             </Col>
                             <Col sm={4}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Year">
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="select" name="select" id="exampleSelect" placeholder="Year">
                                     <option>2020</option>
                                     <option>2021</option>
                                     <option>2022</option>
@@ -119,9 +119,9 @@ class StudentEditProfile extends Component {
                         </FormGroup>
 
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleSelect" sm={4}>Graduation Date</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleSelect" sm={4}>Graduation Date</Label>
                             <Col sm={4}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Term">
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="select" name="select" id="exampleSelect" placeholder="Term">
                                     <option>January</option>
                                     <option>February</option>
                                     <option>March</option>
@@ -137,7 +137,7 @@ class StudentEditProfile extends Component {
                                 </Input>
                             </Col>
                             <Col sm={4}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="Year">
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="select" name="select" id="exampleSelect" placeholder="Year">
                                     <option>2020</option>
                                     <option>2021</option>
                                     <option>2022</option>
@@ -149,9 +149,9 @@ class StudentEditProfile extends Component {
                         </FormGroup>
 
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleSelect" sm={4}>Sector</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleSelect" sm={4}>Sector</Label>
                             <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="please select your desired sector">
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="select" name="select" id="exampleSelect" placeholder="please select your desired sector">
                                     <option>Business</option>
                                     <option>Information Technology</option>
                                     <option>Healthcare</option>
@@ -166,16 +166,16 @@ class StudentEditProfile extends Component {
 
 
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>University/College</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleText" sm={4}>University/College</Label>
                             <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }} type="text" name="text" id="exampleText" placeholder="please enter your place of education" />
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="text" name="text" id="exampleText" placeholder="please enter your place of education" />
                             </Col>
                         </FormGroup>
 
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>About</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleText" sm={4}>About</Label>
                             <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }} type="text" name="text" id="exampleText" placeholder="please enter a fun fact" />
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="text" name="text" id="exampleText" placeholder="please enter a fun fact" />
                             </Col>
                         </FormGroup>
 

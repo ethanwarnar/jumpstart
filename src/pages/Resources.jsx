@@ -108,10 +108,10 @@ class Resources extends Component {
 
                             <Card body outline style={{ height: "200px", justifyContent: "center", borderWidth: "3px", borderRadius: "18px", borderColor: "#FFA824", margin: "7px 0px 0px" }} >
                                 {/* <div style={{ textAlign: "left" }}> */}
-                                <CardTitle style={{ textAlign: "center", fontFamily: "poppins", fontWeight: "bold", fontSize: "19px" }}>{x.name}</CardTitle>
+                                <CardTitle style={{ textAlign: "center", fontFamily: "'Poppins', sans-serif;", fontWeight: "bold", fontSize: "19px" }}>{x.name}</CardTitle>
 
-                                <CardText style={{ textAlign: "center", fontFamily: "poppins", fontSize: "16px" }}>{x.host} - {x.company}</CardText>
-                                <CardText style={{ textAlign: "center", fontFamily: "poppins", fontSize: "16px" }}>{x.date} | {x.time}</CardText>
+                                <CardText style={{ textAlign: "center", fontFamily: "'Poppins', sans-serif;", fontSize: "16px" }}>{x.host} - {x.company}</CardText>
+                                <CardText style={{ textAlign: "center", fontFamily: "'Poppins', sans-serif;", fontSize: "16px" }}>{x.date} | {x.time}</CardText>
                                 {/* <CardText style={{ fontSize: "17px" }}>{x.time}</CardText> */}
                                 {/* </div> */}
                                 <div style={{ textAlign: "center" }}>
@@ -144,14 +144,14 @@ class Resources extends Component {
                     <Row>
                         <Col sm="4">
                             <Card body inverse style={{ borderColor: "#FFA824", justifyContent: "center", borderRadius: "18px", height: "50px", backgroundColor: "#FFA824", margin: "15vh 0px 0px", }} >
-                                <CardText style={{ fontFamily: "poppins", fontSize: "21px", textAlign: "center" }}>
+                                <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "21px", textAlign: "center" }}>
                                     {this.props.eventArray.length} events added to calendar.
                                 </CardText>
                             </Card>
                         </Col>
                         <Col sm="8">
                             <div style={{ margin: "15vh 0px 0px" }}>
-                                <Input onChange={(e) => this.searchSpace(e)} style={{ fontFamily: "poppins", borderRadius: "18px", borderWidth: "3px", textAlign: "center", color: "black", fontSize: "20px", height: "50px", borderColor: "#FFA824", }} type="text" name="email" id="exampleEmail" placeholder="search by event name, company or host" />
+                                <Input onChange={(e) => this.searchSpace(e)} style={{ fontFamily: "'Poppins', sans-serif;", borderRadius: "18px", borderWidth: "3px", textAlign: "center", color: "black", fontSize: "20px", height: "50px", borderColor: "#FFA824", }} type="text" name="email" id="exampleEmail" placeholder="search by event name, company or host" />
                             </div>
                         </Col>
                     </Row>

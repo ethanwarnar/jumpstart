@@ -60,23 +60,23 @@ class StudentHome extends Component {
                 <Row>
                     <Col sm="6">
                         <Card body inverse style={{ justifyContent: "center", borderRadius: "18px", height: "60px", backgroundColor: "#FFA824", margin: "15vh 0px 0px", }} >
-                            <CardText style={{ fontFamily: "poppins", fontSize: "35px", textAlign: "center" }}>Welcome back, {this.props.firstName}!</CardText>
+                            <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "35px", textAlign: "center" }}>Welcome back, {this.props.firstName}!</CardText>
                         </Card>
                     </Col>
                     <Col sm="3">
                         <Card body outline style={{ borderRadius: "18px", justifyContent: "center", height: "60px", borderColor: "#FFA824", margin: "15vh 0px 0px", borderWidth: "3px" }}>
-                            <CardText style={{ fontFamily: "poppins", fontSize: "22px", textAlign: "center" }}>Accepted Events {this.props.eventArray.length} </CardText>
+                            <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "22px", textAlign: "center" }}>Accepted Events {this.props.eventArray.length} </CardText>
                         </Card>
                     </Col>
                     <Col sm="3">
                         <Card body outline style={{ borderRadius: "18px", justifyContent: "center", height: "60px", borderColor: "#FFA824", margin: "15vh 0px 0px", borderWidth: "3px" }}>
-                            <CardText style={{ fontFamily: "poppins", fontSize: "22px", textAlign: "center" }}>New Messages</CardText>
+                            <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "22px", textAlign: "center" }}>New Messages</CardText>
                         </Card>
                     </Col>
                 </Row>
                 <Row>
                     <Col sm="6">
-                        <CardText style={{ fontFamily: "poppins", margin: "25px 0px 20px", fontSize: "25px" }}>Upcoming Events</CardText>
+                        <CardText style={{ fontFamily: "'Poppins', sans-serif;", margin: "25px 0px 20px", fontSize: "25px" }}>Upcoming Events</CardText>
                         <Row>
 
 
@@ -85,13 +85,13 @@ class StudentHome extends Component {
                                     {(this.props.eventArray.length >= 1)
                                         ? (
                                             <div>
-                                                <CardText style={{ fontFamily: "poppins", fontSize: "20px", }}>{this.props.eventArray[0].name} by {this.props.eventArray[0].host}</CardText>
-                                                <CardText style={{ fontFamily: "poppins", fontSize: "14px", }}>{this.props.eventArray[0].date} | {this.props.eventArray[0].time}</CardText>
+                                                <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "20px", }}>{this.props.eventArray[0].name} by {this.props.eventArray[0].host}</CardText>
+                                                <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "14px", }}>{this.props.eventArray[0].date} | {this.props.eventArray[0].time}</CardText>
                                             </div>
                                         )
                                         :
                                         (
-                                            <CardText style={{ fontFamily: "poppins", fontSize: "20px", }}>Please add an event</CardText>
+                                            <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "20px", }}>Please add an event</CardText>
                                         )
                                     }
                                 </Card>
@@ -101,13 +101,13 @@ class StudentHome extends Component {
                                     {(this.props.eventArray.length >= 2)
                                         ? (
                                             <div>
-                                                <CardText style={{ fontFamily: "poppins", fontSize: "20px", }}>{this.props.eventArray[1].name} by {this.props.eventArray[1].host}</CardText>
-                                                <CardText style={{ fontFamily: "poppins", fontSize: "14px", }}>{this.props.eventArray[1].date} | {this.props.eventArray[1].time}</CardText>
+                                                <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "20px", }}>{this.props.eventArray[1].name} by {this.props.eventArray[1].host}</CardText>
+                                                <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "14px", }}>{this.props.eventArray[1].date} | {this.props.eventArray[1].time}</CardText>
                                             </div>
                                         )
                                         :
                                         (
-                                            <CardText style={{ fontFamily: "poppins", fontSize: "20px", }}>Please add an event</CardText>
+                                            <CardText style={{ fontFamily: "'Poppins', sans-serif;", fontSize: "20px", }}>Please add an event</CardText>
 
                                         )
                                     }
@@ -115,7 +115,7 @@ class StudentHome extends Component {
                             </Col>
                         </Row>
 
-                        <CardText style={{ fontFamily: "poppins", margin: "25px 0px 20px", fontSize: "25px" }}>My Mentors</CardText>
+                        <CardText style={{ fontFamily: "'Poppins', sans-serif;", margin: "25px 0px 20px", fontSize: "25px" }}>My Mentors</CardText>
 
 
                         <Row>

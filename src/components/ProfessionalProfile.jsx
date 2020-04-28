@@ -79,10 +79,10 @@ class ProfessionalProfile extends Component {
                 <div style={{ textAlign: "center" }}>
                     <Form>
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>First Name</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleText" sm={4}>First Name</Label>
                             <Col sm={8} >
                                 <Input
-                                    style={{ fontFamily: "poppins", }}
+                                    style={{ fontFamily: "'Poppins', sans-serif;", }}
                                     type="text"
                                     name="text"
                                     id="exampleText"
@@ -92,35 +92,35 @@ class ProfessionalProfile extends Component {
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleText" sm={4}>Last Name</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleText" sm={4}>Last Name</Label>
                             <Col sm={8} >
-                                <Input style={{ fontFamily: "poppins", }} type="text" name="text" id="exampleText" placeholder="please enter your last name" />
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="text" name="text" id="exampleText" placeholder="please enter your last name" />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleEmail" sm={4}>Email</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleEmail" sm={4}>Email</Label>
                             <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }} type="email" name="email" id="exampleEmail" placeholder="please enter your email" />
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="email" name="email" id="exampleEmail" placeholder="please enter your email" />
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleEmail" sm={4}>Calendly Link</Label>
+                            <Label style={{ fontFamily: "''Poppins', sans-serif;', sans-serif;", }} for="exampleEmail" sm={4}>Calendly Link</Label>
                             <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }}type="email" name="email" id="exampleEmail" placeholder="ex. calendly.com/name" />
-                            </Col>
-                        </FormGroup>
-
-                        <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleEmail" sm={4}>Company</Label>
-                            <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }} type="text" name="email" id="exampleEmail" placeholder="please enter your company name" />
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }}type="email" name="email" id="exampleEmail" placeholder="ex. calendly.com/name" />
                             </Col>
                         </FormGroup>
 
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }} for="exampleSelect" sm={4}>Sector</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleEmail" sm={4}>Company</Label>
                             <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }} type="select" name="select" id="exampleSelect" placeholder="please select your desired sector">
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="text" name="email" id="exampleEmail" placeholder="please enter your company name" />
+                            </Col>
+                        </FormGroup>
+
+                        <FormGroup row>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }} for="exampleSelect" sm={4}>Sector</Label>
+                            <Col sm={8}>
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }} type="select" name="select" id="exampleSelect" placeholder="please select your desired sector">
                                     <option>Business</option>
                                     <option>Information Technology</option>
                                     <option>Healthcare</option>
@@ -134,9 +134,9 @@ class ProfessionalProfile extends Component {
                         </FormGroup>
 
                         <FormGroup row>
-                            <Label style={{ fontFamily: "poppins", }}for="exampleText" sm={4}>Fun Fact</Label>
+                            <Label style={{ fontFamily: "'Poppins', sans-serif;", }}for="exampleText" sm={4}>Fun Fact</Label>
                             <Col sm={8}>
-                                <Input style={{ fontFamily: "poppins", }}type="text" name="text" id="exampleText" placeholder="please enter a fun fact" />
+                                <Input style={{ fontFamily: "'Poppins', sans-serif;", }}type="text" name="text" id="exampleText" placeholder="please enter a fun fact" />
                             </Col>
                         </FormGroup>
 

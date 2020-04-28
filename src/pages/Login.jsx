@@ -110,7 +110,7 @@ class Login extends Component {
                     <Navbar style={{ backgroundColor: "#FFF3E2" }} fixed="top" light expand="md">
                         <Container>
                             {/* <Col sm="1" /> */}
-                            <NavbarBrand style={{ fontFamily:'poppins',fontSize: "23px" }} href="/">
+                            <NavbarBrand style={{ fontFamily:"Poppins', sans-serif;",fontSize: "23px" }} href="/">
                                 <MdLocalCafe style={{ transform: "scaleX(-1)", width: "45", height: "45" }} />
                                 <MdAdd style={{ color: "#FFA824", height: "25px", width: "25px" }} />
                                 <MdLocalCafe style={{ width: "45", height: "45", marginRight: "20px" }} />

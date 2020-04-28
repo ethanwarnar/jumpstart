@@ -94,25 +94,25 @@ class NavBar extends Component {
                                     <NavItem style={{ margin: "0px 25px " }}>
                                         <MdDashboard href="/macchiato/dashboard" style={{ width: "30", height: "30" }} />
                                         {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/dashboard">Dashboard</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none", fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/dashboard">Dashboard</a>
+                                        <a className="nav-button" style={{ textDecoration: "none", fontFamily: "'Poppins', sans-serif;", fontSize: "17px" }} href="/macchiato/dashboard">Dashboard</a>
 
                                     </NavItem>
                                     <NavItem style={{ margin: "0px 25px " }}>
                                         <MdEvent href="/macchiato/resources" style={{ width: "30", height: "30" }} />
                                         {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/resources">Events</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none", fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/resources">Events</a>
+                                        <a className="nav-button" style={{ textDecoration: "none", fontFamily: "'Poppins', sans-serif;", fontSize: "17px" }} href="/macchiato/resources">Events</a>
 
                                     </NavItem>
                                     <NavItem style={{ margin: "0px 25px " }}>
                                         <MdGroup href="/macchiato/chat" style={{ width: "30", height: "30" }} />
                                         {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/chat">Networking</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none",fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/chat">Networking</a>
+                                        <a className="nav-button" style={{ textDecoration: "none",fontFamily: "'Poppins', sans-serif;", fontSize: "17px" }} href="/macchiato/chat">Networking</a>
 
                                     </NavItem>
                                     <NavItem style={{ margin: "0px 25px " }}>
                                         <MdPerson style={{ width: "30", height: "30" }} />
                                         {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/profile">Profile</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none",fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/profile">Profile</a>
+                                        <a className="nav-button" style={{ textDecoration: "none",fontFamily: "'Poppins', sans-serif;", fontSize: "17px" }} href="/macchiato/profile">Profile</a>
 
                                     </NavItem>
                                     <NavItem>

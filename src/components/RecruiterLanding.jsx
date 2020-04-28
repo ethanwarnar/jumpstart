@@ -67,10 +67,10 @@ class RecruiterLanding extends Component {
             <React.Fragment>
                     <Row>
                         <Col sm="6">
-                            <CardText style={{fontFamily:"poppins", margin: "31vh 0px 0px", fontSize: "40px", }}>
+                            <CardText style={{fontFamily:"'Poppins', sans-serif;", margin: "31vh 0px 0px", fontSize: "40px", }}>
                                 Discover global   talent <br /> in one-click.
                             </CardText>
-                            <CardText style={{ fontFamily:"poppins",margin: "5vh 0px 0px", fontSize: "25px", }}>
+                            <CardText style={{ fontFamily:"'Poppins', sans-serif;",margin: "5vh 0px 0px", fontSize: "25px", }}>
                                 Macchiato is a platform where you can host events and connect with selected students around the world.
                             </CardText>
                             <div style={{ textAlign: "center" }}>
@@ -97,7 +97,7 @@ class RecruiterLanding extends Component {
                         isOpen={this.state.showModal}
                         toggle={() => this.toggleModal()}
                     >
-                        <ModalHeader style={{ fontFamily: "poppins", }} > Profile </ModalHeader>
+                        <ModalHeader style={{ fontFamily: "'Poppins', sans-serif;", }} > Profile </ModalHeader>
                         <ModalBody style={{ height: "525px", overflowY: "auto" }}>
                             <div style={{ overflow: "scoll" }}>
                                 <ProfessionalProfile style={{ overflow: "scroll" }} />
