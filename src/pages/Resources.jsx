@@ -87,9 +87,7 @@ class Resources extends Component {
     }
 
     render() {
-        // if (!this.props.isLoggedIn) {
-        //     return <Redirect to='/' />
-        // }
+
 
         const items = events.filter((x) => {
             if (this.state.search == null)
@@ -106,7 +104,7 @@ class Resources extends Component {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}>
 
-                            <Card body outline style={{ height: "200px", justifyContent: "center", borderWidth: "3px", borderRadius: "18px", borderColor: "#FFA824", margin: "7px 0px 0px" }} >
+                            <Card body outline style={{ height: "200px", justifyContent: "center", borderWidth: "3px", borderRadius: "18px", borderColor: "#FFA824", margin: "30px 0px 0px" }} >
                                 {/* <div style={{ textAlign: "left" }}> */}
                                 <CardTitle style={{ textAlign: "center", fontFamily: "'Poppins', sans-serif;", fontWeight: "bold", fontSize: "19px" }}>{x.name}</CardTitle>
 
@@ -115,14 +113,15 @@ class Resources extends Component {
                                 {/* <CardText style={{ fontSize: "17px" }}>{x.time}</CardText> */}
                                 {/* </div> */}
                                 <div style={{ textAlign: "center" }}>
+                                    <form target="_blank">
                                     <button className="button"
-                                        href={x.link} target="_blank"
+                                        formAction={x.link}
                                         style={{ margin: "5px 0px 0px", color: "black", borderColor: "#FFA824", width: "125px", fontSize: "15px", textAlign: "center" }}
 
-                                        // style={{ margin: "15px 0px 0px", color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", width: "125px", fontSize: "15px", textAlign: "center" }}
                                         onClick={() => this.props.addNewEvent(x)}
                                     >Sign Up
                                     </button>
+                                    </form>
                                 </div>
                             </Card>
                         </motion.div>
@@ -157,7 +156,7 @@ class Resources extends Component {
                     </Row>
 
 
-                    <Events style={{ marginTop: "30px", height: "550px", overflowY: "auto" }}>
+                    <Events style={{ marginTop: "15px", height: "550px", overflowY: "auto" }}>
                         <Row>
                             {items}
                         </Row>

@@ -106,18 +106,18 @@ class NavBar extends Component {
                                     <NavItem style={{ margin: "0px 25px " }}>
                                         <MdGroup href="/macchiato/chat" style={{ width: "30", height: "30" }} />
                                         {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/chat">Networking</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none",fontFamily: "'Poppins', sans-serif;", fontSize: "17px" }} href="/macchiato/chat">Networking</a>
+                                        <a className="nav-button" style={{ textDecoration: "none", fontFamily: "'Poppins', sans-serif;", fontSize: "17px" }} href="/macchiato/chat">Networking</a>
 
                                     </NavItem>
                                     <NavItem style={{ margin: "0px 25px " }}>
                                         <MdPerson style={{ width: "30", height: "30" }} />
                                         {/* <NavLink className="nav-button" style={{ fontFamily: "poppins", fontSize: "17px" }} href="/macchiato/profile">Profile</NavLink> */}
-                                        <a className="nav-button" style={{ textDecoration: "none",fontFamily: "'Poppins', sans-serif;", fontSize: "17px" }} href="/macchiato/profile">Profile</a>
+                                        <a className="nav-button" style={{ textDecoration: "none", fontFamily: "'Poppins', sans-serif;", fontSize: "17px" }} href="/macchiato/profile">Profile</a>
 
                                     </NavItem>
                                     <NavItem>
-                                        <button className="button"
-                                            style={{ fontSize: "17px", marginLeft:"30px",margin: "10px", color: "black", borderColor: "#FFA824", width: "100px" }}
+                                        <button className="logout-button"
+                                            style={{ fontSize: "17px", marginLeft: "30px", margin: "10px", color: "black", borderColor: "#FFA824", width: "100px" }}
 
                                             // style={{ color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", fontSize: "17px", width: "100px", margin: "15px 25px" }}
                                             onClick={() => (this.props.setLoggedIn())}

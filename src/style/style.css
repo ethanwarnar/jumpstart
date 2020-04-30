@@ -9,39 +9,73 @@
   font-size: 18px;
   border-width: 2px;
   font-family: 'Poppins', sans-serif;
-
-
+	box-shadow: none;
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
+
+button:focus { 	
+  outline: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
 
 .button:hover{
-  background-color:#FFA824; 
+  background-color:#FFA824; 	box-shadow: none;
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
-
 
 .nav-button{
   color:black;
   transition-duration: 0.4s;
   border-radius: 0px;
-  outline: "none";
+  outline: "false";
   font-family: 'Poppins', sans-serif;
-
+	box-shadow: none;
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
 
 }
-
 .nav-button:hover{
   color:rgb(235, 141, 0);
-  outline: "none",
+  outline: "false";	
+  box-shadow: none;
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
 
 }
-
 .nav-button:focus{
   color:rgb(235, 141, 0);
-  outline: "none",
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
 
+.logout-button{
+  background-color: rgb(255, 243, 226);
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  font-size: 18px;
+  border-width: 2px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: none !important;
+}
 
+.logout-button:focus { 	
+    box-shadow: none !important;
 }
 
 
+.logout-button:hover{
+  background-color:#FFA824; 	box-shadow: none;
+  box-shadow: none !important;
+}
 
 .color-nav{
   background-color: #000;

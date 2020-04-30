@@ -108,8 +108,8 @@ class ProNavBar extends Component {
 
                                     </NavItem>
                                     <NavItem>
-                                    <button className="button"
-                                            style={{ fontSize: "17px", marginLeft:"30px",margin: "10px", color: "black", borderColor: "#FFA824", width: "100px" }}
+                                        <button className="logout-button"
+                                            style={{ fontSize: "17px", marginLeft: "30px", margin: "10px", color: "black", borderWidth: "3px", borderColor: "#FFA824", width: "100px" }}
 
                                             // style={{ color: "black", backgroundColor: "#FFA824", borderColor: "#FFA824", fontSize: "17px", width: "100px", margin: "15px 25px" }}
                                             onClick={() => (this.props.setLoggedIn())}
